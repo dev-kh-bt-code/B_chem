@@ -1,6 +1,8 @@
 :root {
     --deep-blue:#155e94;
     --blue:#588fc8;
+    --green:#4ea674;
+    --deep-green:#459071;
 }
 body {
     background-color:white;
@@ -144,26 +146,74 @@ header::before {
 }
 .iupac-center-line{
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left:calc(50% - 1.5px);
     width: 3px;
     height: 100%;
     background:linear-gradient(180deg, #001aff, #ff0000,#001aff, #ff0000);
     border-radius:14px;
 }
-.iupac-card{
+#iupac-card-ester{
     display: grid;
     grid-template-columns: 1.5fr 0.1fr 1.5fr;
-    align-items: center;
-    justify-items: center;
     grid-template-areas: "iupac-image iupac-circle iupac-text";
 }
+#iupac-card-alcohol{
+    display: grid;
+    grid-template-columns: 1.5fr 0.1fr 1.5fr;
+    grid-template-areas: "iupac-text iupac-circle iupac-image";
+}
+.iupac-card{
+    margin: 25px 0;
+    align-items: center;
+    justify-items: center;
+    
+    transition: all 0.1s ease;
+}
 .iupac-circle{
+    position: relative;
     grid-area: iupac-circle;
     width: 30px;
     height: 30px;
     background: var(--blue);
     border-radius: 50%;
+}
+.iupac-circle::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 00%;
+    width:  28px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.253);
+    border: rgb(22, 5, 255) 1.8px solid;
+    border-radius: 50%; 
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 1;
+}
+.iupac-card:hover .iupac-circle::before{
+    opacity: 1;
+    border: var(--green) 1.8px solid;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg) scale(1) ;
+    border-radius: 0%; 
+}
+.iupac-card:hover .iupac-circle {
+    background: var(--green); 
+    transform: scale(0.9);
+}
+.iupac-card:hover{
+    transform: translateY(-5px);
+}
+.iupac-card:hover .iupac-name {
+    background-color: var(--green);
+
+
+}
+.iupac-card:hover .iupac-link{
+    background-color: var(--green);
 }
 .iupac-text{
     grid-area: iupac-text;
@@ -172,8 +222,19 @@ header::before {
     border-radius: 14px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     padding: 0 0 0 0px;
+    transition: all 0.3s ease;
+}
+.iupac-text:hover .iupac-name{
+    background-color: var(--deep-green);
+    color: white;
+    border-radius: 25px;
+}
+.iupac-text:hover .iupac-text-gr{
+    border-left: 3px solid var(--deep-green);
+    color: var(--deep-blue);
 }
 .iupac-image{
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     grid-area: iupac-image;
     width: 100%;
     height: 100%;
@@ -183,6 +244,7 @@ header::before {
     border-radius: 10px;
     object-fit: 110% 100%;
     transition: all 0.3s ease;
+    
 }
 .iupac-card:hover .iupac-image {
     background-size:  110% 110%;
@@ -197,12 +259,13 @@ header::before {
     margin: 8px 0 0 8px;
     background-color: var(--blue);
     padding: 5px 10px;
-    border-radius: 25px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 .iupac-description {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color:var(--deep-blue);
+    color: black;
     
     
 }
@@ -210,13 +273,26 @@ header::before {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     color: #666;
-
-    
-    
 }
 .iupac-text-gr {
-    border-left: 3px solid #667eea;
+    border-left: 3px solid #667eea00;
+    transition: all 0.3s ease;
     margin: 8px 0 0 8px;
     padding: 0px 10px 0px 8px;
     border-radius: 5px;
+}
+.iupac-link{
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 10% 15px 10%;
+    padding: 8px 0;
+    background-color: var(--blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.iupac-link:hover {
+    background-color: #fabb77 !important; /* Lighter shade for hover effect */
 }
