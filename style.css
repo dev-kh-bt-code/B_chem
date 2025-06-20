@@ -4,6 +4,30 @@
     --green:#4ea674;
     --deep-green:#459071;
 }
+@keyframes scroll{
+    0% {
+        top: 50%;
+        right: 100%;
+
+        width: 10%;
+    }
+    100% {
+        top: 50%;
+        right: -100%;
+        width: 100%;
+    }
+
+}
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
 body {
     background-color:white;
     font-family: 'Inter', sans-serif;
@@ -11,6 +35,39 @@ body {
     margin: 0;
     padding: 0;
 }
+.scroll{
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+    bottom: 50%;
+    rotate: 90deg;
+    color: var(--deep-blue);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.scroll::after{
+    display: inline-block;
+    content:" ";
+    position:absolute;
+    height: 2px;
+    background-color: var(--blue);
+    animation: scroll 2s linear infinite alternate;
+    display: block;
+}
+.floatitem{
+    z-index: 10;
+    position: sticky;
+    display: flexbox;
+    animation: float 3s ease-in-out infinite;   
+}
+#icon1, #icon2, #icon3 {
+    position: absolute;
+    font-size: clamp(0.5rem, 10vw, 100px);
+    color: var(--deep-blue);
+    opacity: 0.8;
+}
+
+
 header {
     position: fixed;
     top: 0;
@@ -108,6 +165,7 @@ header::before {
 #hero-button:hover {
     background-color: #e0a86b; /* Lighter shade for hover effect */
 }
+
 #iupac{
     margin: 0;
     padding: 10vh;
@@ -153,12 +211,12 @@ header::before {
     background:linear-gradient(180deg, #001aff, #ff0000,#001aff, #ff0000);
     border-radius:14px;
 }
-#iupac-card-ester{
+#iupac-card-alkane, #iupac-card-arene, #iupac-card-ester {
     display: grid;
     grid-template-columns: 1.5fr 0.1fr 1.5fr;
     grid-template-areas: "iupac-image iupac-circle iupac-text";
 }
-#iupac-card-alcohol{
+#iupac-card-alkene, #iupac-card-alcohol{
     display: grid;
     grid-template-columns: 1.5fr 0.1fr 1.5fr;
     grid-template-areas: "iupac-text iupac-circle iupac-image";
@@ -216,6 +274,7 @@ header::before {
     background-color: var(--green);
 }
 .iupac-text{
+    width: 450px;
     grid-area: iupac-text;
     text-align: left;
     background-color: aliceblue;
@@ -325,6 +384,7 @@ header::before {
     width: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    
 }
 .menu-item{
     display: flex;

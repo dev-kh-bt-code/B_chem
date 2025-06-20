@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B_chem</title>
@@ -9,7 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.0/src/css/phosphor.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,15 +28,16 @@
         <img src="img/logo/logo.svg" alt="logo" id="logo">
         <p id="notification">Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
     </header>
+    <div class="scroll">
+            B_Chem          
+        </div>
     <div id="menu">
         
         <div class="menu-container">
             <div class="menu-item">
                 <i class="ri-home-5-fill" id="menu-home"></i>
-                
             </div>
             <div class="menu-item">
-
                 <i class="ri-a-b" id="menu-iupac"></i>    
             </div>
             <div class="menu-item">
@@ -38,6 +50,16 @@
     </div>
     <main>
     <section id="hero-section">
+        <div class="floatitem" id="icon1" style="top: 2vh; left: 2vw; rotate: 0deg;">
+                <i class="ph-fill ph-flask"></i>
+            </div>
+             <div class="floatitem" id="icon2" style="top: 15vh; right: 2vw;">
+                <i class="ph-fill ph-test-tube"></i>
+            </div>
+            <div class="floatitem" id="icon3" style="top: 20vh; right: 35vw;">
+                <i class="ph-fill ph-atom"></i>
+            </div>
+           
         <div class="hero-content">
             <h1 id="hero-title">B_chem</h1>
             <h2 id="hero-subtitle">Học hoá cùng qb</h2>
@@ -45,11 +67,68 @@
             <a href="#" id="hero-button">GO</a>
         </div>      
     </section>
+
     <section id="iupac">
         <h1 id="iupac-title">Danh pháp iupac</h1>
         <p id="iupac-description">Học danh pháp giống như học từ vựng vậy, chắc phần danh pháp sẽ giúp bạn dễ dàng hơn trong việc làm các bài tập nâng cao.</p>
         <div id="iupac-content">
             <div class="iupac-center-line"> 
+            </div>
+            <div class="iupac-card" id="iupac-card-alkane" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/1.hydrocarbonno.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Hydrocarbon no</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">Số chỉ vị trí nhánh-Tên nhánh Tiền tố ứng với nguyên tử carbon mạch chính "ane"</p>
+                <p class="iupac-ex">Ví dụ: CH3CH2CH(CH3)2: 2-methylbutane</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
+            <div class="iupac-card" id="iupac-card-alkene" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/2.hydrocarbonkhongno.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Hydrocarbon không no</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">Số chỉ vị trí nhánh-Tên nhánh Tiền tố ứng với nguyên tử carbon mạch chính Số chỉ vị trí liên kết bội "ene/yne"</p>
+                <p class="iupac-ex">Ví dụ: CH=C-CH2-CH3:But-1-ene</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
+            <div class="iupac-card" id="iupac-card-arene" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/3.arene.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Arene</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">Phức tạp nên không được đề cập</p>
+                <p class="iupac-ex">C6H6:Benzene</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
+            <div class="iupac-card" id="iupac-card-alcohol" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/5.alcohol.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Alcohol</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">Tên alcohol đa chức: Tên Hydrocarbon + Các số chỉ vị trí nhóm OH + Từ chỉ số lượng nhóm OH + "ol"</p>
+                <p class="iupac-ex">Ví dụ: CH3OH:Methanol</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
             </div>
 
             <div class="iupac-card" id="iupac-card-ester" >
@@ -67,20 +146,7 @@
                 </div>
             </div>
 
-            <div class="iupac-card" id="iupac-card-alcohol" >
-                <div class="iupac-circle">
-                </div>
-                <div class="iupac-image" style="background-image: url('img/illustration/5.alcohol.jpg');">
-                </div>
-                <div class="iupac-text">
-                <h2 class="iupac-name">Alcohol</h2>
-                <div class="iupac-text-gr">
-                <p class="iupac-description">Tên alcohol RCOOR'=Tên gốc R' + Tên gốc acid RCOO</p>
-                <p class="iupac-ex">Ví dụ: CH3COOCH2CH3 = Ethyl acetate</p>
-                </div>
-                <a href="#" class="iupac-link">Test</a>
-                </div>
-            </div>
+           
 
         </div>
     </section>
