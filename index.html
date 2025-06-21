@@ -26,7 +26,9 @@
 <body>
     <header>
         <img src="img/logo/logo.svg" alt="logo" id="logo">
-        <p id="notification">Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
+        <div id="notification">
+        <p >Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
+        </div>
     </header>
     <div class="scroll">
             B_Chem          
@@ -50,7 +52,7 @@
     </div>
     <main>
     <section id="hero-section">
-        <div class="floatitem" id="icon1" style="top: 2vh; left: 2vw; rotate: 0deg;">
+        <div class="floatitem" id="icon1" style="top: 7vh; left: 2vw; rotate: 0deg;">
                 <i class="ph-fill ph-flask"></i>
             </div>
              <div class="floatitem" id="icon2" style="top: 15vh; right: 2vw;">
@@ -82,7 +84,7 @@
                 <div class="iupac-text">
                 <h2 class="iupac-name">Hydrocarbon no</h2>
                 <div class="iupac-text-gr">
-                <p class="iupac-description">Số chỉ vị trí nhánh-Tên nhánh Tiền tố ứng với nguyên tử carbon mạch chính "ane"</p>
+                <p class="iupac-description">[Số chỉ vị trí nhánh] "-" [Tên nhánh] [Tiền tố ứng với nguyên tử carbon mạch chính] "ane"</p>
                 <p class="iupac-ex">Ví dụ: CH3CH2CH(CH3)2: 2-methylbutane</p>
                 </div>
                 <a href="#" class="iupac-link">Test</a>
@@ -96,8 +98,8 @@
                 <div class="iupac-text">
                 <h2 class="iupac-name">Hydrocarbon không no</h2>
                 <div class="iupac-text-gr">
-                <p class="iupac-description">Số chỉ vị trí nhánh-Tên nhánh Tiền tố ứng với nguyên tử carbon mạch chính Số chỉ vị trí liên kết bội "ene/yne"</p>
-                <p class="iupac-ex">Ví dụ: CH=C-CH2-CH3:But-1-ene</p>
+                <p class="iupac-description">[Số chỉ vị trí nhánh] "-" [Tên nhánh] [Tiền tố ứng với nguyên tử carbon mạch chính] "-" [Số chỉ vị trí liên kết bội] "-" "ene/yne"</p>
+                <p class="iupac-ex">Ví dụ: CH2=CH-CH2-CH3:But-1-ene</p>
                 </div>
                 <a href="#" class="iupac-link">Test</a>
                 </div>
@@ -116,6 +118,20 @@
                 <a href="#" class="iupac-link">Test</a>
                 </div>
             </div>
+            <div class="iupac-card" id="iupac-card-halogen" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/4.danxuanhalogen.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Dẫn xuất halogen</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description"> [Số chỉ vị trí nhóm thế] "-" [Tên nhóm thế halogen] [Tên hydrocarbon]</p>
+                <p class="iupac-ex">Ví dụ: CH3CH2CH2Cl:1-chloropropane</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
             <div class="iupac-card" id="iupac-card-alcohol" >
                 <div class="iupac-circle">
                 </div>
@@ -124,13 +140,70 @@
                 <div class="iupac-text">
                 <h2 class="iupac-name">Alcohol</h2>
                 <div class="iupac-text-gr">
-                <p class="iupac-description">Tên alcohol đa chức: Tên Hydrocarbon + Các số chỉ vị trí nhóm OH + Từ chỉ số lượng nhóm OH + "ol"</p>
+                <p class="iupac-description"> [Tên Hydrocarbon] "-" [Các số chỉ vị trí nhóm OH]  [Từ chỉ số lượng nhóm OH]  "ol"</p>
                 <p class="iupac-ex">Ví dụ: CH3OH:Methanol</p>
                 </div>
                 <a href="#" class="iupac-link">Test</a>
                 </div>
             </div>
+            <div class="iupac-card" id="iupac-card-phenol" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/6.phenol.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Phenol</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description"> Không được đề cập</p>
+                <p class="iupac-ex">Ví dụ: C6H5OH : Phenol</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
+            <div class="iupac-card" id="iupac-card-aldehyde" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/7.1.aldehyde.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Aldehyde</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">[Tên hydrocarbon tương ứng (bỏ e ở cuối)] "al"</p>
+                <p class="iupac-ex">Ví dụ: HCHO: Methanal</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
+            <div class="iupac-card" id="iupac-card-ketone" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/7.2.ketone.png');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Ketone</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">[Tên hydrocarbon (bỏ e ở cuối)] "-" [Số chỉ vị trí nhóm carbonyl] "-" "one"</p>
+                <p class="iupac-ex">Ví dụ: C2H5COC2H5: pentan-3-one</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
+            <div class="iupac-card" id="iupac-card-acid" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/8.carbonxyl.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Carboxylic acid</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">[Tên hydrocarbon] "-" [Số chỉ vị trí nhóm carboxyl] "-" [Từ chỉ số lượng nhóm carboxyl] "oic acid"</p>
+                <p class="iupac-ex">Ví dụ: C2H5COC2H5: pentan-3-one</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
 
+            <!---------------------------------lop 12------------------------>
             <div class="iupac-card" id="iupac-card-ester" >
                 <div class="iupac-circle">
                 </div>
@@ -145,9 +218,20 @@
                 <a href="#" class="iupac-link">Test</a>
                 </div>
             </div>
-
-           
-
+            <div class="iupac-card" id="iupac-card-amine" >
+                <div class="iupac-circle">
+                </div>
+                <div class="iupac-image" style="background-image: url('img/illustration/11.amine.jpg');">
+                </div>
+                <div class="iupac-text">
+                <h2 class="iupac-name">Amine</h2>
+                <div class="iupac-text-gr">
+                <p class="iupac-description">"N" "-" [Tên hydrocarbon phụ] [Tên hydrocarbon mạch chính] "-" [Số chỉ vị trí] "amine"</p>
+                <p class="iupac-ex">Ví dụ: CH3NHC2H5: N-methylethaneamine</p>
+                </div>
+                <a href="#" class="iupac-link">Test</a>
+                </div>
+            </div>
         </div>
     </section>
     </main>
