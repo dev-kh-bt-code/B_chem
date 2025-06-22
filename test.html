@@ -26,8 +26,11 @@
 </head>
 <body>
     <header>
-        <img src="img/logo/logo.svg" alt="logo" id="logo">
-        <p id="notification">Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
+        <a href="index.html">
+        <img src="img/logo/logo.svg" alt="logo" id="logo"></a>
+        <div id="notification">
+        <p >Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
+        </div>
     </header>
     <div class="scroll">
             B_Chem-Test          
@@ -36,10 +39,12 @@
         
         <div class="menu-container">
             <div class="menu-item">
-                <i class="ri-home-5-fill" id="menu-home"></i>
+                <a href="index.html">
+                <i class="ri-home-5-fill" id="menu-home"></i></a>
             </div>
             <div class="menu-item">
-                <i class="ri-a-b" id="menu-iupac"></i>    
+                <a href="index.html">
+                <i class="ri-a-b" id="menu-iupac"></i></a>    
             </div>
             <div class="menu-item">
                 <i class="ri-contacts-fill" id="menu-contact"></i>
@@ -49,27 +54,35 @@
         <img src="img/logo/logo.svg" alt="menu" class="menu-toggle">
 
     </div>
-    <div id="status">
-    </div>
     <main>
         <div id="q-container">
             <div id="q-text">
+                <h1 id="test-h1">Câu </h1>
+                <p id="test-question"></p>
             </div>
             <div id="q-img">
+                <img src="" alt="img" id="test-img">
             </div>
         </div>
         <div id="a-container">
+            <h1>Câu trả lời của bạn: </h1>
             <input type="text" id="a-input">
-            <div id="a-output">
-            </div>
-
+            <h1 id="a-output"><i class="ri-check-double-line"></i>Đáp án là:</h1>
+            
         </div>
-        <div id="btn-container">
-            <h1 id="progress">
-            </h1>
+        
+       
+    </main>
+    <footer>
+         <div id="btn-container">
+            <div id="progress-gr">
+                <i class="ri-progress-2-fill" ></i>
+            </div>
             <button id="btn-check">Check</button>
             <button id="btn-next">Next</button>
-            <button id="btn-reset">Reset</button>
+            <button id="btn-key">Key</button>
         </div>
-    </main>
+    </footer>
+    <script src="test.js"></script>
+    </body>
 </html>

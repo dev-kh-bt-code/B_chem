@@ -9,11 +9,11 @@
 
 @keyframes move{
     0%{
-        transform: translateX(-150%);
+        transform: translateX(150%);
 
     }
     100%{
-         transform: translateX(150%);
+         transform: translateX(-150%);
     }
 }
 @keyframes scroll{
@@ -398,6 +398,9 @@ header::before {
 #menu:hover  .menu-toggle {
     transform: rotate(45deg);
     transition: all 0.3s ease;
+}
+.menu-item a{
+    text-decoration: none;
 }
 .menu-container{
     display: flex;
