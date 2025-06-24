@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B_chem</title>
+    <link rel="icon" href="img/logo/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.0/src/css/phosphor.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    #score-section{
+    overflow: auto;
+    margin: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f4f5;
+    z-index: 100000000000000000000000000000000000000;
+}
+#left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 100vh;
+    background-color:#314766;
+}
+#right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    background-color:#f3f4f5;
+}
+#score-title-1{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    font-size: 13vw;
+    font-family: "Be Vietnam Pro", sans-serif;
+    top: 5vh;
+    right: 0;
+    color: #f3f4f5 ;
+}
+#score-title-2{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    font-size: 13vw;
+    font-family: "Be Vietnam Pro", sans-serif;
+    top: 5vh;
+    left: 0;
+    color: #314766 ;
+}
+#score-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 80vw;
+    height: fit-content;
+    background-color: #f3f4f5;
+    border: #314766 5px solid;
+    border-radius: 14px;
+    top: calc(5vh + 15vw);
+    left: 10vw;
+    overflow: auto;
+    
+}
+
+#score, #best-score, #message{
+    position: relative;
+    display: inline;
+    font-family: "Be Vietnam Pro", sans-serif;
+    color: #314766 ;
+    margin: 50px ;
+}
+#btn{
+    position: absolute;
+    top:0;
+    font-size: 18px;
+    font-family: "Inter",sans-serif;
+    color: #314766;
+    background-color: #f3f4f5;
+    border: #f3f4f5 2px solid;
+    border-radius: 14px;
+    padding: 5px;
+    transition: all 0.1 ease-in;
+}
+#btn a{
+    text-decoration: none;
+    font-family: "Inter",sans-serif;
+    font-weight: bold;
+     color: #314766;
+    
+}
+#btn:hover{
+    transform: translateX(5px);
+    transition: all 0.1 ease-in;
+}
+#score-out,#best-score-out{
+    display: inline;
+}
+</style>
+</head>
+<body>
+
+    <section id="score-section">
+        <div id="left">
+            <h1 id="score-title-1">
+                S
+            </h1>
+        </div>
+        <div id="right">
+        <h1 id="score-title-2">
+            CORE
+        </h1>
+        </div>
+        <div id="score-container">
+            <h2 id="score">
+                <i class="ph-fill ph-medal"></i>
+                Score
+                <div id="score-out"></div>
+                <br>
+            </h2>
+            <h2 id="best-score">
+                <i class="ph-fill ph-ranking"></i>
+                Best score
+                <br>
+                <div id="best-score-out">
+
+                </div>
+            </h2>
+            <h2 id="message">
+                
+                GOOD JOB
+            </h2>
+        </div>
+        <div id="btn">
+            <i class="ph-fill ph-caret-circle-double-left"></i>
+            <a href="index.html">Quay về</a>
+        </div>
+
+    </section>
+   
+    <script>
+        let best_score=localStorage.getItem("best_score")
+        let score=localStorage.getItem("score") ;
+        document.getElementById("score-out").innerText=score;
+        if(score>=best_score){
+            best_score=score;
+        };
+        document.getElementById("best-score-out").innerText=best_score;
+        localStorage.setItem("best_score", best_score);
+    </script>
+    </body>
+</html>
