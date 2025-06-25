@@ -292,12 +292,12 @@ let amine =[
     {
         img: "img/data/amine/39.benzenamine-vg.svg",
         q: "Tên thay thế của chất sau là gì",
-        a: "benzeneamine"
+        a: "benzenamine"
     },
     {
         img: "img/data/amine/40.benzenamine.svg",
         q: "Tên thay thế của chất sau là gì",
-        a: "benzeneamine"
+        a: "benzenamine"
     },
     {
         img: "img/data/amine/40.benzenamine.svg",
