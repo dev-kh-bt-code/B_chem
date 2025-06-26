@@ -164,8 +164,8 @@
     </section>
    
     <script>
-        let best_score=localStorage.getItem("best_score")
-        let score=localStorage.getItem("score") ;
+        let best_score=Number(localStorage.getItem("best_score")) || 0;
+        let score=Number(localStorage.getItem("score")) || 0 ;
         document.getElementById("score-out").innerText=score;
         if(score>=best_score){
             best_score=score;

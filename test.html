@@ -57,7 +57,7 @@
     <main>
         <div id="q-container">
             <div id="q-text">
-                <h1 id="test-h1">Câu </h1> <!-- câu số mấy-->
+                <h1 id="test-h1">Nhấn next để bắt đầu</h1> <!-- câu số mấy-->
                 <p id="test-question"></p> <!--chứa nội dung câu hỏi-->
             </div>
             <div id="q-img">
@@ -67,7 +67,22 @@
         <div id="a-container">
             <h1>Câu trả lời của bạn: </h1>
             <input type="text" id="a-input">
-            <h1 id="a-output"><i class="ri-check-double-line"></i>Đáp án là:</h1>
+            <div id="out">
+                <div id="anser">
+            <i class="ri-check-double-line icon"></i><h1 id="anser-out" class="text">Đáp án là:</h1></div>
+            <div id="correct">
+                <i class="ph-fill ph-check-fat icon"></i>
+                <h1 id="correct-out" class="text">
+                    Đúng roii
+                </h1>
+            </div>
+            <div id="incorrect">
+                <i class="ph-fill ph-x-circle icon"></i>
+                <h1 id="incorrect-out" class="text">
+                    Sai roi
+                </h1>
+            </div>
+            </div>
             
         </div>
         
@@ -75,11 +90,15 @@
     </main>
     
     <footer>
-         <div id="btn-container">
-            <div id="progress-gr">
-                <i class="ri-progress-2-fill" ></i>
-                <h1 id="progress-h1" >a</h1>
+        <div id="progress-gr">
+                <div id="progress-container" >
+                    <div id="progress-item" >
+                </div> 
+                </div> 
+                <h1 id="progress-h1" >Nhấn next để bắt đầu</h1>
             </div>
+         <div id="btn-container">
+            
             <button id="btn-check">Check</button>
             <button id="btn-next">Next</button>
             <button id="btn-key">Key</button>

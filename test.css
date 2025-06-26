@@ -5,7 +5,45 @@
     --green: #4ea674;
     --deep-green: #459071;
     --light-green: #9bd098;
+    --red: rgb(236, 60, 89);
     --gradient: 130deg, rgba(255, 255, 255, 0.377), rgba(184, 184, 247, 0.384), #4651976e, #e02eba70, #e02f7675, #9ef88777;
+}
+@keyframes countdown{
+    0%{
+        width: 100%;
+    }
+    60%{
+         width: 40%;
+        background-color: #c0392b;
+
+    }
+    75%{
+        width: 25%;
+
+    }
+
+    100%{
+        width: 0%;
+
+    }
+
+}
+@keyframes show {
+    0%{
+        width: 0%;
+        transform: translateX(150%) scale(0.8);
+
+    }
+    75%{
+        width: 110%%;
+        transform: translateX(-5%) scale(1.1);
+
+    }
+    100%{
+        width: 100%;
+         transform: translateX(0) scale(1);
+    }
+    
 }
 @keyframes move{
     0%{
@@ -42,7 +80,7 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: var(--light-blue);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -340,6 +378,9 @@ main {
 
 /* Footer */
 footer {
+    padding-right: 3vw;
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -350,13 +391,17 @@ footer {
 }
 
 #btn-container {
+    right: 0;
+    align-self: end;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content:end;
     padding: 15px 5px;
     height: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100px;
+    margin: 0 0 0 3vw;
+    
 }
 
 #progress-gr {
@@ -367,8 +412,32 @@ footer {
     font-weight: 600;
     margin: 0;
 }
+#progress-container{
+    position: relative;
+    border-radius: 30px;
+    margin: 5px 0 5px 5px;
+    display: inline-block;
+    height: 15px;
+    width: 7vw;
+    background-color: #70f7bc;
+}
+#progress-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 00%;
+    height: 100%;
+    background-color: #459071;
+    border-radius: 15px;
+    animation: countdown 1s ease-in;
+
+}
+#progress-h1{
+    display: inline;
+}
 
 button {
+    position: absolute;
     padding: 10px 20px;
     margin: 0 5px;
     border: none;
@@ -402,6 +471,8 @@ button {
 }
 
 #btn-key {
+    left: -100%;
+    visibility: visible;
     background-color: #e74c3c;
     color: white;
 }
@@ -420,10 +491,81 @@ button:disabled {
     cursor: not-allowed;
     transform: none;
 }
-#progress-h1{
+
+.ri-check-double-line, .ph-check-fat,  .ph-x-circle{
     display: inline;
+    font-size: 50px;
+    border-radius: 50%;
+    text-align: end;
+
+    padding: 30% 0 0 0;
+
+}
+.ri-check-double-line{
+    color: var(--deep-blue);
+}
+.ph-check-fat{
+    color: var(--green);
+
+}
+.ph-x-circle{
+    color: var(--red);
+}
+#out{
+    margin: 15px 0 0 0;
+    position: relative;
+    height: 170px;
+}
+#anser, #correct, #incorrect{
+    background-color: #ffffff;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    padding: 0 0 0 10px;
+    display: grid;
+    grid-template-columns: 0.1fr auto;
+    grid-template-areas: " icon text";
+}
+.show{
+    visibility: visible !important;
+    animation: show 0.3s ease-in;
 }
 
+.icon{
+    grid-area: icon;
+
+}
+.text{
+    grid-area: text;
+}
+#anser{
+    z-index: 10000;
+    border: var(--deep-blue) 2px solid;
+    border-radius: 14px;
+}
+#anser-out{
+    color: var(--deep-blue);
+    font-weight: 600 !important;
+}
+#correct{
+    border: var(--green) 2px solid;
+    border-radius: 14px;
+}
+#correct-out{
+    color: var(--green) !important;
+    font-weight: 600 !important;
+}
+#incorrect{
+    border: var(--red) 2px solid;
+    border-radius: 14px;
+}
+#incorrect-out{
+    color: var(--red) !important;
+    font-weight: 600 !important;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
