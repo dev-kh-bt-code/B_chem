@@ -15,7 +15,7 @@ let messages_false=[
 
 
 
-let max_ques = 3;
+let max_ques = 20;
 let ques = 0;
 let base_score = 10;
 let max_bonus = 50;
@@ -58,11 +58,12 @@ btnnext.addEventListener("click", ()=> {
     localStorage.setItem("score", score);
     window.location.href = "score.html";}else{
     check();
+    document.getElementById("progress-h1").innerText = score + "/" + ((base_score+max_bonus)*max_ques);
     start_time=Date.now();
     end_time=0;
     document.getElementById("progress-item").style.animation="none";
     document.getElementById("progress-item").offsetHeight;
-    document.getElementById("progress-item").style.animation="countdown 20s ease-in";
+    document.getElementById("progress-item").style.animation="countdown 15s ease-in";
     random = Math.floor(Math.random()*arr.length);
     document.getElementById("test-question").innerText= arr[random].q;
     document.getElementById("test-img").src= arr[random].img;
@@ -97,7 +98,7 @@ btncheck.addEventListener("click",()=>{
         end_time=Date.now();
         time=(end_time -  start_time)/1000 ;
         if (time<=max_time){
-            if (time < 20){
+            if (time < 15){
                 bonus_score = max_bonus;
             }else{
                 bonus_score= max_bonus*((max_time-time)/max_time);

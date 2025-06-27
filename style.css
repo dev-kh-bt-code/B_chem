@@ -244,7 +244,7 @@ header::before {
     grid-template-columns: 1.5fr 0.1fr 1.5fr;
     grid-template-areas: "iupac-image iupac-circle iupac-text";
 }
-#iupac-card-alkene,#iupac-card-halogen, #iupac-card-phenol,#iupac-card-ketone,#iupac-card-ester {
+#iupac-card-alkene,#iupac-card-halogen, #iupac-card-phenol,#iupac-card-ketone,#iupac-card-ester,#iupac-card-random {
     display: grid;
     grid-template-columns: 1.5fr 0.1fr 1.5fr;
     grid-template-areas: "iupac-text iupac-circle iupac-image";
@@ -492,6 +492,7 @@ header::before {
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.322);
 }
 #iupac-description{
+    transform: translateX(-30px);
     justify-self: center !important;
     align-self: center;
     font-size: 1.1rem;
@@ -505,7 +506,7 @@ header::before {
     grid-template-columns: 90vw;
     grid-template-areas:  "iupac-text";
 }
-#iupac-card-alkene,#iupac-card-halogen, #iupac-card-phenol,#iupac-card-ketone,#iupac-card-ester {
+#iupac-card-alkene,#iupac-card-halogen, #iupac-card-phenol,#iupac-card-ketone,#iupac-card-ester,#iupac-card-random {
     display: grid;
     grid-template-columns: 90vw;
     grid-template-areas: "iupac-text ";
@@ -513,6 +514,7 @@ header::before {
 .iupac-card{
     align-self: center;
     justify-self: center;
+    margin-left: 30px;
 }
 .iupac-circle{
    visibility: hidden;
@@ -525,3 +527,8 @@ header::before {
 .iupac-image{
     visibility: hidden; 
 }}
+ @media (max-width: 1090px){
+    .iupac-center-line{
+        visibility: hidden;
+    }
+ }

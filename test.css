@@ -35,7 +35,7 @@
 
     }
     75%{
-        width: 110%%;
+        width: 110%;
         transform: translateX(-5%) scale(1.1);
 
     }
@@ -189,6 +189,9 @@ header::before {
     right: 5vw;
     z-index: 100000000000;
 }
+#menu a{
+    text-decoration: none;
+}
 
 #menu:hover .menu-container {
     width: 200px;
@@ -320,7 +323,7 @@ main {
 }
 
 #a-container h1 {
-    font-size: clamp(16px, 3vh, 28px);
+    font-size: clamp(1.5rem, 3vw, 28px);
     color: var(--deep-blue);
     margin: 0 0 20px 0;
     font-family: "Inter", sans-serif;
@@ -360,7 +363,6 @@ main {
     border-radius: 8px;
     min-height: 50px;
     font-weight: 500;
-    font-size: 25px;
 
 }
 
@@ -434,6 +436,7 @@ footer {
 }
 #progress-h1{
     display: inline;
+    font-size: 1rem;
 }
 
 button {
@@ -574,17 +577,21 @@ button:disabled {
     }
     
     #q-container {
+        width: 90vw;
+        justify-self: center;
         margin: 0 0 20px 0;
         padding: 15px;
     }
     
     #a-container {
+        width: 90vw;
+        justify-self: center;
         margin: 0 0 20px 0;
         padding: 15px;
     }
     
     #notification {
-        font-size: 12px;
+        font-size: 18px !important;
     }
     
     #menu {
