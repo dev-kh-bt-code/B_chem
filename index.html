@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta name="description" content="Trang web học tập hoá học">
+<meta name="keywords" content="B_Chem,b_chem, bchem, binhweb, binh'sweb, binh-web, binh's-web, hoá, học hóa, danh pháp, iupac, hóa 12, hoá thptqg">
+<meta name="author" content="Qb">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B_chem</title>
@@ -31,6 +33,14 @@
         <p >Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
         </div>
     </header>
+    <section id="pop-up-notification">
+        <div id="pop-up-notification-container">
+        <i class="ri-chat-1-fill"></i>
+        <h1>Ẹt ẹt</h1>
+        <button id="close-btn-pop-up-notification"> <i class="ri-close-circle-fill"></i></button>
+        <p>Hiện tại qb chỉ mới làm data cho phần ester, amine và random thoi<i class="ri-emotion-unhappy-line"></i>, mấy phần khác sẽ cập nhật sau. Nên là mn coi 3 phần đó trc i</p>
+    </div>
+    </section>
     <div class="scroll">
             B_Chem          
         </div>
@@ -42,12 +52,12 @@
                 <i class="ri-home-5-fill" id="menu-home"></i></a>
             </div>
             <div class="menu-item">
-                <a href=#iupac>
+                <a href=#iupac-card-ester>
                 <i class="ri-a-b" id="menu-iupac"></i></a>    
             </div>
-            <div class="menu-item">
+            <!--<div class="menu-item">
                 <i class="ri-contacts-fill" id="menu-contact"></i>
-            </div>
+            </div>-->
             
         </div>
         <img src="img/logo/logo.svg" alt="menu" class="menu-toggle">
@@ -75,7 +85,7 @@
 
     <section id="iupac">
         <h1 id="iupac-title">Danh pháp iupac</h1>
-        <p id="iupac-description">Muốn làm quen với ai đó trước tiên phải biết tên của họ. Muốn làm bạn với hoá hữu cơ, hãy học danh pháp👍</p>
+        <p id="iupac-description">Đề thptqg hoá đợt này có câu đọc tên thay thế đấy:) nên lo học danh pháp đi đừng để mất 0.25 ngu</p>
         <div id="iupac-content">
             <div class="iupac-center-line"> 
             </div>
@@ -90,7 +100,7 @@
                 <p class="iupac-description">[Số chỉ vị trí nhánh] "-" [Tên nhánh] [Tiền tố ứng với nguyên tử carbon mạch chính] "ane"</p>
                 <p class="iupac-ex">Ví dụ: CH3CH2CH(CH3)2: 2-methylbutane</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata" >Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-alkene" >
@@ -104,7 +114,7 @@
                 <p class="iupac-description">[Số chỉ vị trí nhánh] "-" [Tên nhánh] [Tiền tố ứng với nguyên tử carbon mạch chính] "-" [Số chỉ vị trí liên kết bội] "-" "ene/yne"</p>
                 <p class="iupac-ex">Ví dụ: CH2=CH-CH2-CH3:But-1-ene</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-arene" >
@@ -118,7 +128,7 @@
                 <p class="iupac-description">Phức tạp nên không được đề cập</p>
                 <p class="iupac-ex">C6H6:Benzene</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-halogen" >
@@ -132,7 +142,7 @@
                 <p class="iupac-description"> [Số chỉ vị trí nhóm thế] "-" [Tên nhóm thế halogen] [Tên hydrocarbon]</p>
                 <p class="iupac-ex">Ví dụ: CH3CH2CH2Cl:1-chloropropane</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-alcohol" >
@@ -146,7 +156,7 @@
                 <p class="iupac-description"> [Tên Hydrocarbon] "-" [Các số chỉ vị trí nhóm OH]  [Từ chỉ số lượng nhóm OH]  "ol"</p>
                 <p class="iupac-ex">Ví dụ: CH3OH:Methanol</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-phenol" >
@@ -160,7 +170,7 @@
                 <p class="iupac-description"> Không được đề cập</p>
                 <p class="iupac-ex">Ví dụ: C6H5OH : Phenol</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-aldehyde" >
@@ -174,7 +184,7 @@
                 <p class="iupac-description">[Tên hydrocarbon tương ứng (bỏ e ở cuối)] "al"</p>
                 <p class="iupac-ex">Ví dụ: HCHO: Methanal</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-ketone" >
@@ -188,7 +198,7 @@
                 <p class="iupac-description">[Tên hydrocarbon (bỏ e ở cuối)] "-" [Số chỉ vị trí nhóm carbonyl] "-" "one"</p>
                 <p class="iupac-ex">Ví dụ: C2H5COC2H5: pentan-3-one</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
             <div class="iupac-card" id="iupac-card-acid" >
@@ -202,7 +212,7 @@
                 <p class="iupac-description">[Tên hydrocarbon] "-" [Số chỉ vị trí nhóm carboxyl] "-" [Từ chỉ số lượng nhóm carboxyl] "oic acid"</p>
                 <p class="iupac-ex">Ví dụ: C2H5COC2H5: pentan-3-one</p>
                 </div>
-                <a href="#" class="iupac-link">Test</a>
+                <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
 
@@ -238,7 +248,7 @@
              <div class="iupac-card" id="iupac-card-random" >
                 <div class="iupac-circle">
                 </div>
-                <div class="iupac-image" style="background-image: url('img/illustration/11.amine.jpg');">
+                <div class="iupac-image" style="background-image: url('img/illustration/0.random.jpg">
                 </div>
                 <div class="iupac-text">
                 <h2 class="iupac-name">Random</h2>

@@ -5,6 +5,7 @@
     --deep-green:#459071;
     --light-green:#9bd098;
     --gradient: 130deg,rgba(255, 255, 255, 0.377),rgba(184, 184, 247, 0.384),#4651976e,#e02eba70,#e02f7675,#9ef88777;
+    --red: rgb(236, 60, 89);
 }
 
 @keyframes move{
@@ -72,6 +73,74 @@ body {
     background-color: var(--blue);
     animation: scroll 2s linear infinite alternate;
     display: block;
+}
+#pop-up-notification{
+    transform: translateY(-100%);
+    opacity: 1;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000001;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease-in;
+    overflow: hidden;
+    
+}
+
+#pop-up-notification-container{
+    overflow: hidden;
+    position: relative;
+    justify-self: center;
+    width: 80vw;
+    height: fit-content;
+    background-color: white;
+    margin-top: 2vh;
+    border-radius: 14px;
+    border: var(--light-green) 3px solid;
+    padding: 30px 10px 10px 20px;
+    transition: all 0.2s ease-in;
+}
+.ri-chat-1-fill{
+    position: relative;
+    font-size: 3rem;
+    display: inline;
+    padding: 5px;
+    color: var(--green);
+    border: var(--green) 3px solid;
+    border-radius: 50%;
+}
+#pop-up-notification-container h1{
+    position: relative;
+    display: inline;
+    font-size: 3rem;
+    font-family: noto-sans, sans-serif;
+    color: var(--red);
+    
+}
+#pop-up-notification-container p{
+    font-size: 01rem;
+    font-family: noto-sans, sans-serif;
+    font-weight: light;
+}
+#close-btn-pop-up-notification{
+    position: absolute;
+    top:2vh;
+    right: 2vw;
+    background-color: rgba(245, 222, 179, 0);
+    border: none;
+    font-size: 2.5rem;
+    color: var(--red);
+    opacity: 0.8;
+}
+#close-btn-pop-up-notification:hover{
+    transform: scale(1.2);
+    transition: all 0.1s ease-in;
+    transform: rotate(90deg);
+}
+#close-btn-pop-up-notification{
+    transition: all 0.1s ease-in;
 }
 .floatitem{
     z-index: 10;

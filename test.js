@@ -14,8 +14,21 @@ let messages_false=[
 ];
 
 
+let correct_mp3_yay= document.getElementById("correct-mp3-yay");
+let correct_mp3_yupy= document.getElementById("correct-mp3-yupy");
+let correct_mp3_correct= document.getElementById("correct-mp3-correct");
+let incorrect_mp3_sairoibnoi= document.getElementById("incorrect-mp3-sairoibnoi");
 
-let max_ques = 20;
+let correct_mp3=[
+    correct_mp3_yay,
+    correct_mp3_yupy,
+    correct_mp3_correct
+];
+let incorrect_mp3=[
+    incorrect_mp3_sairoibnoi
+];
+
+let max_ques = 3;
 let ques = 0;
 let base_score = 10;
 let max_bonus = 50;
@@ -112,7 +125,12 @@ btncheck.addEventListener("click",()=>{
              document.getElementById("correct-out").innerText = "max score";
 
         }else{
+
             document.getElementById("correct-out").innerText = messages_true[random_messages_true];
+            let mp3_random=correct_mp3[Math.floor(Math.random()*correct_mp3.length)];
+            mp3_random.pause();
+            mp3_random.currentTime=0;
+            mp3_random.play();
         };
         document.getElementById("progress-h1").innerText = score + "/" + ((base_score+max_bonus)*max_ques);
 
@@ -129,6 +147,10 @@ btncheck.addEventListener("click",()=>{
             document.getElementById("incorrect").style.visibility= "hidden";
         }, 3000);
         document.getElementById("incorrect-out").innerText = messages_false[random_messages_false];
+        let mp3_random=incorrect_mp3[Math.floor(Math.random()*incorrect_mp3.length)];
+            mp3_random.pause();
+            mp3_random.currentTime=0;
+            mp3_random.play();
     }; 
 });
 

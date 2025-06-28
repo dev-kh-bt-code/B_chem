@@ -2129,7 +2129,21 @@ let random =[
    
     
 ]
+let btn_close_pop_up=document.getElementById("close-btn-pop-up-notification");
+let pop_up_notification=document.getElementById("pop-up-notification");
+btn_close_pop_up.addEventListener("click",()=>{
+    
+    pop_up_notification.style.transform="translateY(-100%)";
+});
 localStorage.removeItem("Data");
+let btns_nodata =document.querySelectorAll(".nodata");
+btns_nodata.forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        pop_up_notification.style.transform="translateY(0)";
+        
+        
+    });
+});
 document.getElementById("amine-link").addEventListener("click", ()=>{
      localStorage.setItem("Data", JSON.stringify(amine));
     window.location.href = "test.html";

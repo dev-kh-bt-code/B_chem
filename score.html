@@ -124,7 +124,7 @@
 </style>
 </head>
 <body>
-
+    <audio src="mp3/clap.mp3" id="end-mp3-clap"></audio>
     <section id="score-section">
         <div id="left">
             <h1 id="score-title-1">
@@ -172,6 +172,14 @@
         };
         document.getElementById("best-score-out").innerText=best_score;
         localStorage.setItem("best_score", best_score);
+        let end_mp3_clap= document.getElementById("end-mp3-clap");
+        let end_mp3=[
+    end_mp3_clap
+];
+let mp3_random=end_mp3[Math.floor(Math.random()*end_mp3.length)];
+            mp3_random.pause();
+            mp3_random.currentTime=0;
+            mp3_random.play();
     </script>
     </body>
 </html>
