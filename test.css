@@ -389,7 +389,7 @@ footer {
     right: 0;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.267) 0 0 5px 0;
-    z-index: 99;
+    z-index: 100000000000000;
 }
 
 #btn-container {
@@ -415,12 +415,16 @@ footer {
     margin: 0;
 }
 #progress-container{
-    position: relative;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    right: 5px;
+
     border-radius: 30px;
     margin: 5px 0 5px 5px;
     display: inline-block;
     height: 15px;
-    width: 7vw;
+    width: calc(100vw -10px);
     background-color: #70f7bc;
 }
 #progress-item{
@@ -434,7 +438,24 @@ footer {
     animation: countdown 1s ease-in;
 
 }
-#progress-h1{
+#progress-item img {
+    height: 10vh;
+}
+#tungtung{
+    position: absolute;
+    top: -5vh;
+    right: -30px;
+}
+#meohoanghot{
+    position: absolute;
+    top: -5vh;
+    left: 0;
+}
+#score-h1{
+    z-index: 10000000000000000000000000000000000000000 !important;
+    top: 25px;
+    left: 5vw;
+    position: fixed;
     display: inline;
     font-size: 1rem;
 }
@@ -442,7 +463,8 @@ footer {
 button {
     position: absolute;
     padding: 10px 20px;
-    margin: 0 5px;
+    top: 25px;
+    margin: 0 7px;
     border: none;
     border-radius: 5px;
     font-size: 14px;

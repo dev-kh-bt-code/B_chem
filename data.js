@@ -1065,6 +1065,241 @@ let ester =[
     
 
 ];
+let aminoacid =[
+    {
+        img: "img/data/amino acid/01.gly.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-aminoethanoic acid"
+    },
+    {
+        img: "img/data/amino acid/02.ala.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-aminopropanoic acid"
+    },
+    {
+        img: "img/data/amino acid/03.val.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-amino-3-methylbutanoic acid"
+    },
+    {
+        img: "img/data/amino acid/04.glu.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-aminopentane-1,5-dioic acid"
+    },
+    {
+        img: "img/data/amino acid/05.lys.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2,6-diaminohexanoic acid"
+    },
+    {
+        img: "img/data/amino acid/06.gly-ctpt.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-aminoethanoic acid"
+    },
+    {
+        img: "img/data/amino acid/07.ala-ctpt.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-aminopropanoic acid"
+    },
+    {
+        img: "img/data/amino acid/08.val-ctpt.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-amino-3-methylbutanoic acid"
+    },
+    {
+        img: "img/data/amino acid/09.glu-ctpt.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2-aminopentane-1,5-dioic acid"
+    },
+    {
+        img: "img/data/amino acid/10.lys-ctpt.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "2,6-diaminohexanoic acid"
+    },
+    {
+        img: "img/data/amino acid/11.5-aminopentanoicacid.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "5-aminopentanoicacid"
+    },
+    {
+        img: "img/data/amino acid/12.ε-aminocaproic acid.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "6-aminohexanoic acid"
+    },
+    {
+        img: "img/data/amino acid/13.ω-aminoenanthic acid.svg",
+        q: "Tên thay thế của chất sau ",
+        a: "7-aminoheptanoic acid"
+    },
+    
+
+    {
+        img: "img/data/amino acid/01.gly.svg",
+        q: "Tên thường của chất sau ",
+        a: "glycine"
+    },
+    {
+        img: "img/data/amino acid/02.ala.svg",
+        q: "Tên thường của chất sau ",
+        a: "alanine"
+    },
+    {
+        img: "img/data/amino acid/03.val.svg",
+        q: "Tên thường của chất sau ",
+        a: "valine"
+    },
+    {
+        img: "img/data/amino acid/04.glu.svg",
+        q: "Tên thường của chất sau ",
+        a: "glutamic acid"
+    },
+    {
+        img: "img/data/amino acid/05.lys.svg",
+        q: "Tên thường của chất sau ",
+        a: "lysine"
+    },
+    {
+        img: "img/data/amino acid/06.gly-ctpt.svg",
+        q: "Tên thường của chất sau ",
+        a: "glycine"
+    },
+    {
+        img: "img/data/amino acid/07.ala-ctpt.svg",
+        q: "Tên thường của chất sau ",
+        a: "alanine"
+    },
+    {
+        img: "img/data/amino acid/08.val-ctpt.svg",
+        q: "Tên thường của chất sau ",
+        a: "valine"
+    },
+    {
+        img: "img/data/amino acid/09.glu-ctpt.svg",
+        q: "Tên thường của chất sau ",
+        a: "glutamic acid"
+    },
+    {
+        img: "img/data/amino acid/10.lys-ctpt.svg",
+        q: "Tên thường của chất sau ",
+        a: "lysine"
+    },
+    
+    
+    {
+        img: "img/data/amino acid/01.gly.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "gly"
+    },
+    {
+        img: "img/data/amino acid/02.ala.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "ala"
+    },
+    {
+        img: "img/data/amino acid/03.val.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "val"
+    },
+    {
+        img: "img/data/amino acid/04.glu.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "glu"
+    },
+    {
+        img: "img/data/amino acid/05.lys.svg",
+        q: "Tên viết tắt của chất sau",
+        a: "lys"
+    },
+    {
+        img: "img/data/amino acid/06.gly-ctpt.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "gly"
+    },
+    {
+        img: "img/data/amino acid/07.ala-ctpt.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "ala"
+    },
+    {
+        img: "img/data/amino acid/08.val-ctpt.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "val"
+    },
+    {
+        img: "img/data/amino acid/09.glu-ctpt.svg",
+        q: "Tên viết tắt của chất sau ",
+        a: "glu"
+    },
+    {
+        img: "img/data/amino acid/10.lys-ctpt.svg",
+        q: "Tên viết tắt của chất sau",
+        a: "lys"
+    },
+
+   
+    
+    {
+        img: "img/data/amino acid/01.gly.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminoacetic acid"
+    },
+    {
+        img: "img/data/amino acid/02.ala.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminopropionic acid"
+    },
+    {
+        img: "img/data/amino acid/03.val.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminoisovaleric acid"
+    },
+    {
+        img: "img/data/amino acid/04.glu.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminoglutaric acid"
+    },
+    {
+        img: "img/data/amino acid/05.lys.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α,ε-diaminocaproic acid"
+    },
+    {
+        img: "img/data/amino acid/06.gly-ctpt.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminoacetic acid"
+    },
+    {
+        img: "img/data/amino acid/07.ala-ctpt.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminopropionic acid"
+    },
+    {
+        img: "img/data/amino acid/08.val-ctpt.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminoisovaleric acid"
+    },
+    {
+        img: "img/data/amino acid/09.glu-ctpt.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α-aminoglutaric acid"
+    },
+    {
+        img: "img/data/amino acid/10.lys-ctpt.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "α,ε-diaminocaproic acid"
+    },
+    {
+        img: "img/data/amino acid/12.ε-aminocaproic acid.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "ε-aminocaproic acid"
+    },
+    {
+        img: "img/data/amino acid/13.ω-aminoenanthic acid.svg",
+        q:  "Tên bán hệ thống của các chất sau (copy các kí hiệu ở đây α   β   γ   δ   ε   ω)"	,
+        a: "ω-aminoenanthic acid"
+    },
+    
+]
 let random =[
     {
         img: "img/data/amine/01.N-methylbutan-1-amine.svg",
@@ -2150,6 +2385,10 @@ document.getElementById("amine-link").addEventListener("click", ()=>{
 });
 document.getElementById("ester-link").addEventListener("click", ()=>{
      localStorage.setItem("Data", JSON.stringify(ester));
+    window.location.href = "test.html";
+});
+document.getElementById("aminoacid-link").addEventListener("click", ()=>{
+     localStorage.setItem("Data", JSON.stringify(aminoacid));
     window.location.href = "test.html";
 });
 document.getElementById("random-link").addEventListener("click", ()=>{

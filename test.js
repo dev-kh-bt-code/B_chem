@@ -28,7 +28,7 @@ let incorrect_mp3=[
     incorrect_mp3_sairoibnoi
 ];
 
-let max_ques = 3;
+let max_ques = 20;
 let ques = 0;
 let base_score = 10;
 let max_bonus = 50;
@@ -48,6 +48,8 @@ function check() {
     btnnext.style.visibility="hidden";
     
 };
+
+
 function next() {
     btnnext.style.visibility="visible";
     btncheck.style.visibility="hidden";
@@ -66,17 +68,37 @@ next();
 key_hidden();
 
 let random;
+let timeout1=0;
+let timeout2=0;
+let timeout3=0;
+let timeout4=0;
+let vw50 = window.innerWidth * 0.5;
 btnnext.addEventListener("click", ()=> {
+    clearTimeout(timeout1);
+    clearTimeout(timeout2);
+    document.getElementById("meohoanghot").src="img/img/meouia.svg";
     if (ques == max_ques) {
     localStorage.setItem("score", score);
     window.location.href = "score.html";}else{
     check();
-    document.getElementById("progress-h1").innerText = score + "/" + ((base_score+max_bonus)*max_ques);
+    document.getElementById("score-h1").innerText = score + "/" + ((base_score+max_bonus)*max_ques);
     start_time=Date.now();
     end_time=0;
     document.getElementById("progress-item").style.animation="none";
     document.getElementById("progress-item").offsetHeight;
     document.getElementById("progress-item").style.animation="countdown 15s ease-in";
+    timeout1 =setTimeout(() => {
+    
+       document.getElementById("meohoanghot").src="img/img/meohoanghot.svg";
+    }, 7000);
+    timeout2 =setTimeout(() => {
+    
+       document.getElementById("meohoanghot").src="img/img/chet.svg";
+    }, 15000);
+
+
+
+
     random = Math.floor(Math.random()*arr.length);
     document.getElementById("test-question").innerText= arr[random].q;
     document.getElementById("test-img").src= arr[random].img;
@@ -86,7 +108,6 @@ btnnext.addEventListener("click", ()=> {
     document.getElementById("a-input").value="";
     document.getElementById("a-output").innerText = "";
     };
-    
 
 
 });    
@@ -132,7 +153,7 @@ btncheck.addEventListener("click",()=>{
             mp3_random.currentTime=0;
             mp3_random.play();
         };
-        document.getElementById("progress-h1").innerText = score + "/" + ((base_score+max_bonus)*max_ques);
+        document.getElementById("score-h1").innerText = score + "/" + ((base_score+max_bonus)*max_ques);
 
     }else{
         check();

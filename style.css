@@ -308,7 +308,18 @@ header::before {
     background:linear-gradient(180deg, #001aff, #ff0000,#001aff, #ff0000);
     border-radius:14px;
 }
-#iupac-card-alkane, #iupac-card-arene,#iupac-card-alcohol,#iupac-card-aldehyde,#iupac-card-acid, #iupac-card-amine {
+.left{
+    display: grid;
+    grid-template-columns: 1.5fr 0.1fr 1.5fr;
+    grid-template-areas: "iupac-image iupac-circle iupac-text";
+
+}
+.right{
+    display: grid;
+    grid-template-columns: 1.5fr 0.1fr 1.5fr;
+    grid-template-areas: "iupac-text iupac-circle iupac-image";
+}
+/*#iupac-card-alkane, #iupac-card-arene,#iupac-card-alcohol,#iupac-card-aldehyde,#iupac-card-acid, #iupac-card-amine {
     display: grid;
     grid-template-columns: 1.5fr 0.1fr 1.5fr;
     grid-template-areas: "iupac-image iupac-circle iupac-text";
@@ -317,7 +328,7 @@ header::before {
     display: grid;
     grid-template-columns: 1.5fr 0.1fr 1.5fr;
     grid-template-areas: "iupac-text iupac-circle iupac-image";
-}
+}*/
 .iupac-card{
     margin: 70px 0;
     align-items: center;
@@ -570,16 +581,22 @@ header::before {
 .iupac-center-line{
     visibility: hidden;
 }
-#iupac-card-alkane, #iupac-card-arene,#iupac-card-alcohol,#iupac-card-aldehyde,#iupac-card-acid, #iupac-card-amine {
+.left{
     display: grid;
     grid-template-columns: 90vw;
     grid-template-areas:  "iupac-text";
 }
-#iupac-card-alkene,#iupac-card-halogen, #iupac-card-phenol,#iupac-card-ketone,#iupac-card-ester,#iupac-card-random {
+#iupac-card-alkane, #iupac-card-arene,#iupac-card-alcohol,#iupac-card-aldehyde,#iupac-card-acid, #iupac-card-amine,#iupac-card-random {
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-areas:  "iupac-text";
+}
+#iupac-card-alkene,#iupac-card-halogen, #iupac-card-phenol,#iupac-card-ketone,#iupac-card-ester,  #iupac-card-aminoacid {
     display: grid;
     grid-template-columns: 90vw;
     grid-template-areas: "iupac-text ";
 }
+
 .iupac-card{
     align-self: center;
     justify-self: center;
