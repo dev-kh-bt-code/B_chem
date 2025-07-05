@@ -1,11 +1,14 @@
 :root {
+    --light:#faded8;
     --deep-blue:#155e94;
     --blue:#588fc8;
     --green:#4ea674;
     --deep-green:#459071;
+    --dark-green: #235055;
     --light-green:#9bd098;
     --gradient: 130deg,rgba(255, 255, 255, 0.377),rgba(184, 184, 247, 0.384),#4651976e,#e02eba70,#e02f7675,#9ef88777;
     --red: rgb(236, 60, 89);
+    --shadow:#1e1e3a3a;
 }
 
 @keyframes move{
@@ -41,6 +44,7 @@ html{
     width: 100vw;
 }
 body {
+    
     width: 100vw;
     background-color:white;
     font-family: 'Inter', sans-serif;
@@ -529,6 +533,71 @@ header::before {
 .menu-item:hover {
     transform: translateY(-5px);
     transition: all 0.3s ease;
+}
+
+#tc{
+    display: block;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+}
+#tc-container{
+    display: block;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    background-color: var(--light-green);
+}
+#tc-header{
+    width: 100%;
+    height: 110vh;
+    background-color: var(--dark-green);
+    border-radius: 0 0 50px 50px;
+    
+    align-content: center;
+    justify-items: start;
+}
+#tc-main{
+    width: 80%;
+    height: 100vw;
+    background-color: var(--light);
+    justify-self: center;
+    border-radius: 20px;
+    transform: translateY(-25px);
+    box-shadow: 0 0 10px 10px var(--shadow);
+}
+
+#tc-title {
+    display: inline-block;
+    width: 60vw;
+    font-size:clamp(2rem, 10vw, 5rem);
+    font-weight: 800;
+    color: var(--light);
+    text-shadow: 0 2px 4px rgba(233, 226, 226, 0.322);
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0px 0 0 5vw;
+    
+    
+   
+}
+#tc-description {
+    
+    display: inline-block;
+    width: 60vw;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: var(--light-green);
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    margin: 10px 0 0 5vw;
+}
+#tc-text{
+    display: inline-block;
+    width: 60vw;
+    margin: 0;
+}
+#tc-img{
+    width: 30vw;
+    min-width: 200px;
 }
 
  @media (max-width: 768px){
