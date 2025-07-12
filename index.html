@@ -39,7 +39,7 @@
         <a href="index.html">
         <img src="img/logo/logo.svg" alt="logo" id="logo"></a>
         <div id="notification">
-        <p >Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
+        <p >Web còn đang trong giai đoạn phát  triển. Mỗi lần vào test, hệ thống sẽ random ra các câu hỏi mới vì vậy hãy test thật nhiều lần để vững kiến thức nha</p>
         </div>
     </header>
     <section id="pop-up-notification">
@@ -64,12 +64,13 @@
                 <a href=#iupac-card-ester>
                 <i class="ri-a-b" id="menu-iupac"></i></a>    
             </div>
-            <!--<div class="menu-item">
-                <i class="ri-contacts-fill" id="menu-contact"></i>
-            </div>-->
+            <div class="menu-item">
+                <a href="#tc">
+                <i class="ri-flask-line" id="menu-tc"></i></a>
+            </div>
             
         </div>
-        <img src="img/logo/logo.svg" alt="menu" class="menu-toggle">
+        <img src="favicon.ico" alt="menu" class="menu-toggle">
 
     </div>
     <main>
@@ -98,7 +99,7 @@
         <div id="iupac-content">
             <div class="iupac-center-line"> 
             </div>
-            <div class="iupac-card left" id="iupac-card-alkane" >
+            <!--<div class="iupac-card left" id="iupac-card-alkane" >
                 <div class="iupac-circle">
                 </div>
                 <div class="iupac-image" style="background-image: url('img/illustration/1.hydrocarbonno.jpg');">
@@ -224,7 +225,7 @@
                 <a href="#" class="iupac-link nodata">Test</a>
                 </div>
             </div>
-
+        -->
             <!---------------------------------lop 12------------------------>
             <div class="iupac-card right" id="iupac-card-ester" >
                 <div class="iupac-circle">
@@ -283,23 +284,72 @@
                 </div>
             </div>
         </div>
-        <!--
+        
     </section>
     <section id="tc">
         <div id="tc-container">
             <div id="tc-header">
                 <div id="tc-text">
-                <h1 id="tc-title">Tính chất</h1>
-                <p id="tc-description">Ôn luyện các tính chất cơ bản bằng các quizz</p>
+                <h1 id="tc-title">Lý thuyết</h1>
+                <p id="tc-description">Các định nghĩa, tính chất vật lý, tính chất hoá học cơ bản nhất cần phải nắm. Nhớ đúng bản chất, không lừa không gài, không chọn đại</p>
                 </div>
-                <img src="img/illustration/1.hydrocarbonno.jpg" alt="img" id="tc-img">
+                <div id="deco">
+                    <div id="deco-img">
+                        <div id="deco-img-2"></div>
+                        <img src="img/img/benzene.png" alt="img" id="tc-img">
+                        <div id="deco-img-3">B-chem-Tính chất</div>
+                        <div id="deco-img-4">
+                            <i class="ph-fill ph-flask"></i>
+                            <i class="ph-fill ph-test-tube"></i>
+                            <i class="ph-fill ph-atom"></i>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <div id="tc-main">
-
+                <div class="tc-card">
+                    <i class="ph-fill ph-flask"></i>
+                    <p>Ester</p>
+                    <div class="tc-btn-con">
+                        <button id="ds-ester">
+                            test
+                        </button>
+                    </div>
+                </div>
+                <div class="tc-card">
+                    <i class="ph-fill ph-feather"></i>
+                    <p>Chất béo</p>
+                    <div class="tc-btn-con">
+                        <button id="ds-chatbeo">
+                            test
+                        </button>
+                    </div>
+                </div>
+                <div class="tc-card">
+                    <i class="ph-fill ph-bathtub"></i>
+                    <p> Xà phòng</p>
+                    <div class="tc-btn-con" id="ds-xaphong">
+                        <button>
+                            test
+                        </button>
+                    </div>
+                </div>
+                <div class="tc-card">
+                    <i class="ph-fill ph-shuffle-angular"></i>
+                    <p>Random</p>
+                    <div class="tc-btn-con" >
+                        <button id="ds-random">
+                            test
+                        </button>
+                    </div>
+                </div>
+                
             </div>
         </div>
-    </section>-->
+    </section>
     </main>
     <script src="data.js"></script>
+    <script src="data2.js"></script>
 </body>
 </html>

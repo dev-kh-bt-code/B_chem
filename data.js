@@ -1299,7 +1299,7 @@ let aminoacid =[
         a: "ω-aminoenanthic acid"
     },
     
-]
+];
 let random =[
     {
         img: "img/data/amine/01.N-methylbutan-1-amine.svg",
@@ -2363,7 +2363,11 @@ let random =[
     },
    
     
-]
+];
+
+
+
+
 let btn_close_pop_up=document.getElementById("close-btn-pop-up-notification");
 let pop_up_notification=document.getElementById("pop-up-notification");
 btn_close_pop_up.addEventListener("click",()=>{
@@ -2379,6 +2383,7 @@ btns_nodata.forEach(btn=>{
         
     });
 });
+
 document.getElementById("amine-link").addEventListener("click", ()=>{
      localStorage.setItem("Data", JSON.stringify(amine));
     window.location.href = "test.html";

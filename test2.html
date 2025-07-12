@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B_chem - Nơi hoá học không còn nhàm chán</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="test2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.0/src/css/phosphor.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio src="mp3/yay.mp3" id="correct-mp3-yay"></audio>
+    <audio src="mp3/yupy.mp3" id="correct-mp3-yupy"></audio>
+    <audio src="mp3/correct.mp3" id="correct-mp3-correct"></audio>
+    <audio src="mp3/sairoibnoi.mp3" id="incorrect-mp3-sairoibnoi"></audio>
+    
+    <header>
+        <a href="index.html">
+        <img src="img/logo/logo.svg" alt="logo" id="logo"></a>
+        <div id="notification">
+        <p >Hiện tại qb chỉ mới làm phần danh pháp thôi. Trong tương lai, qb sẽ cập nhật thêm nhiều tính năng mới!</p>
+        </div>
+    </header>
+    <div class="scroll">
+            B_Chem-Test          
+        </div>
+    <div id="menu">
+        
+        <div class="menu-container">
+            <div class="menu-item">
+                <a href="index.html">
+                <i class="ri-home-5-fill" id="menu-home"></i></a>
+            </div>
+            <div class="menu-item">
+                <a href="index.html">
+                <i class="ri-a-b" id="menu-iupac"></i></a>    
+            </div>
+            <div class="menu-item">
+                <a href="index.html">
+                <i class="ri-flask-line" id="menu-tc"></i></a>
+                
+            </div>
+            
+        </div>
+        <img src="img/logo/logo.svg" alt="menu" class="menu-toggle">
+
+    </div>
+
+    <main>
+        <div id="container">
+            <div id="q">
+                <h1 id="test-h1">Nhấn next để bắt đầu</h1> <!-- câu số mấy-->
+                <p id="test-question"></p> <!--chứa nội dung câu hỏi-->
+                <p id="test-q-note"></p>
+            </div>
+            <div id="a">
+                <label>
+                    <input  id="a-input-t" type="radio" name="ds" value="đúng">
+                    Đúng
+                </label>
+                <label >
+                    <input  id="a-input-f" type="radio" name="ds" value="sai">
+                    Sai
+                </label>
+            </div>
+        </div>
+        <div id="a-container">
+            <h1>Hãy chọn đúng hoặc sai </h1>
+            
+            
+
+            <div id="out">
+                <div id="anser">
+            <i class="ri-check-double-line icon"></i><h1 id="anser-out" class="text">Đáp án là:</h1></div>
+            <div id="correct">
+                <i class="ph-fill ph-check-fat icon"></i>
+                <h1 id="correct-out" class="text">
+                    Đúng roii
+                </h1>
+            </div>
+            <div id="incorrect">
+                <i class="ph-fill ph-x-circle icon"></i>
+                <h1 id="incorrect-out" class="text">
+                    Sai roi
+                </h1>
+            </div>
+            </div>
+            
+        </div>
+        
+       
+    </main>
+    
+    <footer>
+        <div id="progress-gr">
+                <div id="progress-container" >
+                    <div id="progress-item" >
+                        <img src="img/img/meouia.svg" alt="tung tung" id="meohoanghot">
+                    <img src="img/img/tung tung.svg" alt="tung tung" id="tungtung">
+                </div> 
+                </div> 
+                
+            </div>
+            <div id="score-container">
+                <h1 id="score-h1" >Nhấn next để bắt đầu</h1>
+            </div>
+         <div id="btn-container">
+            
+            <button id="btn-check">Check</button>
+            <button id="btn-next">Next</button>
+            <button id="btn-key">Key</button>
+        </div>
+    </footer>
+    <script src="test2.js"></script>
+    </body>
+</html>
