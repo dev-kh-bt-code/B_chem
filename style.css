@@ -1,5 +1,5 @@
 :root {
-    --light:#faded8;
+    --light:#f7f7f7;
     --deep-blue:#155e94;
     --blue:#588fc8;
     --green:#4ea674;
@@ -72,6 +72,7 @@ body {
     color: var(--deep-blue);
     font-size: 1rem;
     font-weight: 600;
+    
 }
 .scroll::after{
     display: inline-block;
@@ -490,6 +491,7 @@ header::before {
 .menu-item a{
     text-decoration: none;
 }
+
 .menu-container{
     display: flex;
     flex-direction: row;
@@ -728,7 +730,7 @@ header::before {
     height: 200px;
     border-radius: 20px;
     background-color: white;
-    box-shadow: #ff57572f 0 0 30px 20px;
+    box-shadow: #ff57572f 0 0 30px 10px;
     overflow-y: hidden;
     
 }
@@ -801,12 +803,25 @@ header::before {
   }
    html, body {
     overflow-x: hidden !important;}
-
+ @media (max-height: 400px){
+    #hero-section{
+        height:150vh;
+    }
+    #tc-header{
+        height: 150vh !important;
+        padding: 5vh 0 2vh 0 !important;
+    }
+    #tc-text{
+        margin-top: 70vh !important;
+        width: 90vw;
+    }
+ }
   @media (max-width: 960px){
     #tc-header{
         padding: 5vh 0 2vh 0;
-        height: 50vh;
+        min-height: 50vh;
         border-radius: 0 0 10px 10px;
+        justify-content: center;
     }
     #deco{
         
@@ -814,13 +829,14 @@ header::before {
     }
     #tc-text{
         margin-top: 5vh;
-        width: 100%;
+        width: 90vw;
     }
     #tc-description{
-        width: 100%;
+        font-size: 0.9rem;
+        width:90vw;
     }
     #tc-title{
-        width: 100%;
+        width: 90vw;
     }
   }
  
