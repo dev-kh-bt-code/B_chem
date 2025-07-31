@@ -905,11 +905,7 @@ let ds_chatbeo =[
     a: "sai",
     explain: "bằng phản ứng hydrogen hoá"
   },
-  {
-    q: "Trong một phân tử triolein có 3 liên kết π.",
-    a: "đúng",
-    explain: "đúng"
-  },
+
   {
     q: "Để phân biệt các chất lỏng: acetic acid, glycerol, triolein, có thể chỉ cần dùng nước và quỳ tím.",
     a: "đúng",
