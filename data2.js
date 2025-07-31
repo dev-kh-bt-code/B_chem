@@ -3052,8 +3052,369 @@ let ds_poly=[
   },
 
 ]
-let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo,...ds_mono, ...ds_di, ...ds_poly] ;
+let ds_amine=[
+  {
+    q: "Amine là dẫn xuất của ammonia trong đó nguyên tử H trong ammmonia được thay thế bằng gốc hydrocarbon",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Theo bậc của amine, amine được phân thành amine bậc một, bậc 2, bậc 3",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "R-NH<sub>2</sub> là amine bậc 1",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "R-NH<sub>2</sub> là amine bậc 2",
+    a: "sai",
+    explain: "bậc 1"
+  },
+  {
+    q: "R-NH<sub>2</sub> là amine bậc 3",
+    a: "sai",
+    explain: "bậc 1"
+  },
+  {
+    q: "R-NH-R' là amine bậc 2",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "R-NH-R' là amine bậc 1",
+    a: "sai",
+    explain: "bậc 2"
+  },
+  {
+    q: "R-NH-R' là amine bậc 3",
+    a: "sai",
+    explain: "bậc 2"
+  },
+  {
+    q: "N(R)<sub>3</sub> là amine bậc 3",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "N(R)<sub>3</sub> là amine bậc 2",
+    a: "sai",
+    explain: "bậc 3"
+  },
+  {
+    q: "N(R)<sub>3</sub> là amine bậc 1",
+    a: "sai",
+    explain: "bậc 3"
+  },
+  {
+    q: "Theo bản chất gốc hydrocarbon amine được chia thành 2 loại điển hình là alkylamine và arylamine",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "CH3-NH2 là alkylamine",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "CH3-NH2 là arylamine",
+    a: "sai",
+    explain: "alkylamine"
+  },
+  {
+    q: "C6H5-NH2 là arylamine",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "C6H5-NH2 là alkylamine",
+    a: "sai",
+    explain: "arylamine"
+  },
+  {
+    q: "C6H5-NH2 là aniline",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Công thức của amine no, mạch hở là C<sub>n</sub>H<sub>2n+2+k</sub>N<sub>k</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Công thức của amine no, mạch hở, đơn chức là C<sub>n</sub>H<sub>2n+3</sub>N",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Công thức của amine no, mạch hở, đơn chức là C<sub>n</sub>H<sub>2n+1</sub>N",
+    a: "sai",
+    explain: "C<sub>n</sub>H<sub>2n+3</sub>N"
+  },
+  {
+    q: "Ở điều kiện thường, methylamine ở thể khí",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở điều kiện thường, dimethylamine ở thể khí",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở điều kiện thường, trimethylamine ở thể khí",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở điều kiện thường, ethylamine ở thể khí",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở điều kiện thường, methylamine ở thể lỏng",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Ở điều kiện thường, dimethylamine ở thể lỏng",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Ở điều kiện thường, trimethylamine ở thể lỏng",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Ở điều kiện thường, ethylamine ở thể lỏng",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Ở điều kiện thường, methylamine ở thể rắn",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Ở điều kiện thường, dimethylamine ở thể rắn",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Ở điều kiện thường, trimethylamine ở thể rắn",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Ở điều kiện thường, ethylamine ở thể rắn",
+    a: "sai",
+    explain: "ở điều kiện thường, methylamine, dimethylamine, trimethylamine, ethylamine là 4 amine ở thể khí"
+  },
+  {
+    q: "Methylamine, dimethylamine, trimethylamine, ethylamine tan tốt trong nước, có mùi khai, tanh, có độc tính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Methylamine không tan trong nước",
+    a: "sai",
+    explain: "tan tốt"
+  },
+  {
+    q: "Trimethylamine không tan trong nước do không tạo được liên kết hydrogen với nước",
+    a: "sai",
+    explain: "tan tốt"
+  },
+  {
+    q: "Trimethylamine có mùi thơm",
+    a: "sai",
+    explain: "có mùi tanh của cá"
+  },
+  {
+    q: "Trimethylamine có mùi tanh của cá",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Các amine có kích thước nhỏ dễ tan trong nước do tạo liên kết hydrogen với nước, khi tăng số C độ tan giảm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Aniline là chất lỏng, ít tan trong nước, nặng hơn nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Aniline là chất rắn, ít tan trong nước, nặng hơn nước",
+    a: "sai",
+    explain: "Aniline là chất lỏng, ít tan trong nước, nặng hơn nước"
+  },
+  {
+    q: "Aniline là chất lỏng, tan tốt trong nước, nặng hơn nước",
+    a: "sai",
+    explain: "Aniline là chất lỏng, ít tan trong nước, nặng hơn nước"
+  },
+  {
+    q: "Aniline là chất lỏng, ít tan trong nước, nhẹ hơn nước",
+    a: "sai",
+    explain: "Aniline là chất lỏng, ít tan trong nước, nặng hơn nước"
+  },
+  {
+    q: "Dung dịch methylamine làm quỳ tím hoá xanh",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Dung dịch methylamine không làm đổi màu quỳ tím",
+    a: "sai",
+    explain: "làm quỳ tím hoá xanh"
+  },
+  {
+    q: "Dung dịch aniline không làm đổi màu quỳ tím",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Dung dịch aniline không làm đổi màu quỳ tím chứng toả aniline không có tính base",
+    a: "sai",
+    explain: "Có tính base nhưng yếu"
+  },
+  {
+    q: "Dung dịch aniline làm quỳ tím hoá xanh",
+    a: "sai",
+    explain: "Không làm đổi màu quỳ tím"
+  },
+  {
+    q: "Amine có tính base",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amine có tính acid",
+    a: "sai",
+    explain: "base"
+  },
+  {
+    q: "Amine có tính base do cặp e tự do của nguyên tử N",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amine có phản ứng với acid tạo thành muối ammonium",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Methylamine phản ứng với dung dịch FeCl3 tạo kết tủa đỏ gạch",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Methylamine phản ứng với dung dịch CuSO4 tạo dung dịch xanh lam",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Methylamine phản ứng với dung dịch CuSO4 tạo kết tủa xanh Cu(OH)2",
+    a: "sai",
+    explain: "dung dịch xanh lam"
+  },
+  {
+    q: "Methylamine phản ứng với dung dịch CuSO4 tạo dung dịch xanh tím",
+    a: "sai",
+    explain: "dung dịch xanh lam"
+  },
+  {
+    q: "Các amine nhỏ có thể tạo phức với Cu(OH)<sub>2</sub>, Ni(OH)<sub>2</sub>, Zn(OH)<sub>2</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Methylamine có thể phản ứng với Cu(OH)<sub>2</sub> tạo thành [Cu(CH<sub>3</sub>NH<sub>2</sub>)<sub>4</sub>](OH)<sub>2</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "amine bậc 1 có thể phản ứng với HNO2 tạo thành alcohol, N2 và H2O",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "amine bậc 1 có thể phản ứng với NaNO2 + HCl tạo thành alcohol, N2 và H2O",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "amine bậc 2 có thể phản ứng với NaNO2 + HCl tạo thành alcohol, N2 và H2O",
+    a: "sai",
+    explain: "amine bậc 2 tạo hợp chất nitrozo màu vàng"
+  },
+  {
+    q: "amine bậc 3 có thể phản ứng với nitrous acid tạo thành alcohol, N2 và H2O",
+    a: "sai",
+    explain: "amine bậc 3 không phản ứng với nitrous acid"
+  },
+  {
+    q: "amine bậc 1 có thể phản ứng với nitrous acid tạo thành muối diazonium",
+    a: "sai",
+    explain: "tạo thành alcohol, N2 và H2O"
+  },
+  {
+    q: "Aniline phản ứng với nitrous acid ở nhiệt độ thấp (0-5 độ C) tạo thành muối diazonium",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Aniline phản ứng với nitrous acid ở nhiệt độ cao tạo thành muối diazonium",
+    a: "sai",
+    explain: "ở nhiệt độ cao, muối diazonium bị phân huỷ tạo thành phenol, N2"
+  },
+  {
+    q: "Aniline phản ứng với nitrous acid ở nhiệt độ thấp (0-5 độ C) tạo thành muối N2 và alcohol",
+    a: "sai",
+    explain: "Tạo thành muối diazonium"
+  },
+  {
+    q: "Aniline phản ứng với Br2 tạo kết tủa trắng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Aniline phản ứng với Br2 tạo kết tủa vàng",
+    a: "sai",
+    explain: "kết tủa trắng"
+  },
+  {
+    q: "Aniline là nguyên liệu sản xuất phẩm nhuộm (phẩm màu azo), dược phẩm, sản xuất polymer..",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Một số amine dùng để sản xuất polymer",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Aniline thường được điều chế bằng cách khử hợp chất nitro",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Một số amine thường được điều chế bằng phương pháp alkyl hoá ammonia",
+    a: "đúng",
+    explain: "đúng"
+  },
+]
+let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo,...ds_mono, ...ds_di, ...ds_poly,...ds_amine] ;
 localStorage.removeItem("Data");
+document.getElementById("ds-amine").addEventListener("click", ()=>{
+  localStorage.setItem("Data", JSON.stringify(ds_amine));
+  window.location.href = "test2.html";
+});
 document.getElementById("ds-poly").addEventListener("click", ()=>{
   localStorage.setItem("Data", JSON.stringify(ds_poly));
   window.location.href = "test2.html";
