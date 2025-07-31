@@ -404,11 +404,7 @@ let ds_ester =[
     a: "sai",
     explain: "Ester hai chức có ít nhất hai liên kết π (từ 2 nhóm C=O)."
   },
-  {
-    q: "Có 2 công thức cấu tạo mạch hở ứng với hợp chất hữu cơ có công thức phân tử C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>.",
-    a: "sai",
-    explain: "sai"
-  },
+
   {
     q: "CH<sub>3</sub>OCOC<sub>2</sub>H<sub>5</sub> có tên gọi là ethyl acetate.",
     a: "sai",
@@ -1661,11 +1657,1419 @@ let ds_xaphong = [
       a: "sai",
       explain: "Đuôi kị nước của xà phòng có mạch C không phân nhánh."
     },
+
   
 
 ];
-let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo];
+
+
+
+let ds_mono = [
+  {
+    q: "Carbohydrate là những hợp chất hữu cơ tạp chức",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Carbohydrate là những hợp chất hữu cơ đa chức",
+    a: "sai",
+    explain: "tạp chức"
+  },
+  {
+    q: "Carbohydrate là những hợp chất hữu cơ đơn chức",
+    a: "sai",
+    explain: "tạp chức"
+  },
+  {
+    q: "Carbohydrate thường có công thức chung là C<sub>n</sub>(H<sub>2</sub>O)<sub>m</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Carbohydrate luôn có công thức chung là C<sub>n</sub>(H<sub>2</sub>O)<sub>m</sub>",
+    a: "sai",
+    explain: "Một số carbohydrate không thoả công thức C<sub>n</sub>(H<sub>2</sub>O)<sub>m</sub>"
+  },
+  {
+    q: "Carbohydrate còn được gọi là glucide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Dựa vào phản ứng thuỷ phân có thể chia carbohydrate thành ba loại: monosaccharide, disaccharide, polysaccharide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Carbohydrate còn gọi là saccharide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Monosaccharide là những carbohydrate không bị thuỷ phân. Ví dụ: glucosr, fructose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Monosaccharide là những carbohydrate không bị thuỷ phân. Ví dụ: glucosr, saccharose",
+    a: "sai",
+    explain: "saccharose không phải monosaccharide"
+  },
+  {
+    q: "Disaccharide là những carbohydrate khi bị thuỷ phân tạo ra hai đơn vị monosaccharide. Ví dụ: saccharose, maltose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Polysaccharide là những carbohydrate khi bị thuỷ phân tạo ra nhiều đơn vị monosaccharide. Ví dụ: tinh bột, cellulose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose có M=180 amu",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose có M=184 amu",
+    a: "sai",
+    explain: "180 amu"
+  },
+  {
+    q: "Glucose có M=162 amu",
+    a: "sai",
+    explain: "180 amu"
+  },
+  {
+    q: "Glucose công thức là C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose công thức là C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>",
+    a: "sai",
+    explain: "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>"
+  },
+  {
+    q: "Glucose là chất rắn, tinh thể không màu, tan tốt trong nước, có vị ngọt",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose là chất rắn, tinh thể màu trắng, tan tốt trong nước, có vị ngọt",
+    a: "sai",
+    explain: "Không màu"
+  },
+  {
+    q: "Glucose là chất rắn, tinh thể không màu, ít tan trong nước, có vị ngọt",
+    a: "sai",
+    explain: "tan tốt"
+  },
+  {
+    q: "Glucose có nhiều trong quả chín",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose được gọi là đường nho",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose được gọi là đường mật",
+    a: "sai",
+    explain: "đường nho"
+  },
+  {
+    q: "Glucose có trong một số bộ phận khác của cây như hoa, lá, rễ",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose có trong máu động vật",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 4,4-7,2 mmol/L",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 4,4-7,2 mol/L",
+    a: "sai",
+    explain: "mmol/L"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 10-12 mmol/L",
+    a: "sai",
+    explain: "4,4-7,2"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 1-7,2 mmol/L",
+    a: "sai",
+    explain: "4,4-7,2"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 4,4-12 mmol/L",
+    a: "sai",
+    explain: "4,4-7,2"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 80-130 mmol/L",
+    a: "sai",
+    explain: "4,4-7,2 mmol/L"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 80-130 mg/dL",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 80-130 mg/L",
+    a: "sai",
+    explain: "mg/dL"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 40-130 mg/dL",
+    a: "sai",
+    explain: "80-130"
+  },
+  {
+    q: "Hàm lượng glucose trong máu người trưởng thành, sức khoả bình thường, trước khi ăn là khoảng 50-70 mg/dL",
+    a: "sai",
+    explain: "80-130"
+  },
+  {
+    q: "Glucose có vai trò cung cấp năng lượng cho tế bào",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose dùng để sản xuất thuốc tăng lực, dịch truyền tỉnh mạch( dd glucose 5%)",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose dùng để sản xuất thực phẩm, đồ uống",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose dùng để sản xuất ethanol, tráng gương, ruột phích",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Trong dung dịch, glucose tồn tại cả dạng mạch hở và mạch vòng, chủ yếu là ở dạng vòng 6 cạnh",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Trong dung dịch, glucose tồn tại cả dạng mạch hở và mạch vòng, chủ yếu là ở dạng mạch hở",
+    a: "sai",
+    explain: "chủ yếu là dạng vòng"
+  },
+  {
+    q: "Trong dung dịch, glucose tồn tại cả dạng mạch hở và mạch vòng, chủ yếu là ở dạng vòng 5 cạnh",
+    a: "sai",
+    explain: "Dạng vòng 6 cạnh"
+  },
+  {
+    q: "Trong dung dịch, glucose chỉ tồn tại dạng mạch vòng",
+    a: "sai",
+    explain: "tồn tại cả dạng mạch hở và mạch vòng"
+  },
+  {
+    q: "Dạng mạch hở và mạch vòng của glucose có thể chuyển hoá qua lại lẫn nhau",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở dạng mạch vòng, nhóm OH số 1 được gọi là OH hemiacetal",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở dạng mạch vòng, nhóm OH số 1 được gọi là OH hemiketal",
+    a: "sai",
+    explain: "hemiacetal"
+  },
+  {
+    q: "Ở dạng mạch hở, glucose có 5 nhóm -OH liền kề và 1 nhóm -CHO",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose có phản ứng với Cu(OH)<sub>2</sub> trong môi trường kiềm ở nhiệt độ thường tạo dung dịch màu xanh lam",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose có phản ứng với Cu(OH)<sub>2</sub> trong môi trường kiềm ở nhiệt độ thường tạo dung dịch màu tím",
+    a: "sai",
+    explain: "màu xanh lam"
+  },
+  {
+    q: "Glucose không thể phản ứng với Cu(OH)<sub>2</sub> trong môi trường kiềm ở nhiệt độ thường",
+    a: "sai",
+    explain: "Glucose có thể phản ứng với Cu(OH)<sub>2</sub>"
+  },
+  {
+    q: "Glucose có phản ứng với Cu(OH)<sub>2</sub> trong môi trường kiềm ở nhiệt độ thường tạo ra kết tủa trắng",
+    a: "sai",
+    explain: "tạo dung dịch xanh"
+  },
+  {
+    q: "Glucose có phản ứng với Cu(OH)<sub>2</sub> trong môi trường kiềm ở nhiệt độ thường tạo ra dung dịch xanh tím",
+    a: "sai",
+    explain: "tạo dung dịch xanh lam"
+  },
+  {
+    q: "Glucose có phản ứng với thuốc thử Tollens",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose không thể phản ứng với thuốc thử Tollens",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Glucose có phản ứng tráng bạc",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glucose có phản ứng [Ag(NH<sub>3</sub>)<sub>2</sub>]OH",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "1 mol glucose phản ứng với [Ag(NH<sub>3</sub>)<sub>2</sub>]OH tạo ra 2 mol Ag",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "1 mol glucose phản ứng với [Ag(NH<sub>3</sub>)<sub>2</sub>]OH tạo ra 4 mol Ag",
+    a: "sai",
+    explain: "2 mol Ag"
+  },
+  {
+    q: "Glucose có thể phản ứng với dung dịch Br2",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Glucose có thể làm mất màu với dung dịch Br2",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Glucose không thể phản ứng với dung dịch Br2",
+    a: "sai",
+    explain: "glucose có phản ứng với dung dịch Br2"
+  },
+  {
+    q: "Glucose có thể phản ứng với Br2 ở điều kiện thường",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Glucose phản ứng với Br2 tạo thành gluconic acid",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Glucose phản ứng với Br2 tạo thành glutamic acid",
+    a: "sai",
+    explain: "gluconic acid"
+  },
+  {
+    q: "Glucose có thể phản ứng với Cu(OH)2 đun nóng tạo kết tủa đỏ gạch",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Glucose có thể phản ứng với Cu(OH)2 đun nóng tạo kết tủa trắng",
+    a: "sai",
+    explain: "đỏ gạch"
+  },
+  {
+    q: "Glucose không thể phản ứng với Cu(OH)2 đun nóng",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Glucose có thể phản ứng H2 tạo thành sorbitol",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Glucose có thể phản ứng H2 tạo thành gluconic acid",
+    a: "sai",
+    explain: "tạo thành sorbitol"
+  },
+  {
+    q: "Glucose có thể tham gia phản ứng lên men rượu và lên men lactic",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "1 mol glucose lên men tạo 2 mol rượu và 2 mol CO2",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "1 mol glucose lên men tạo 1 mol rượu và 2 mol CO2",
+    a: "sai",
+    explain: "1 mol rượu"
+  },
+  {
+    q: "1 mol glucose lên men tạo 2 mol lactic acid",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "1 mol glucose lên men tạo 1 mol lactic acid",
+    a: "sai",
+    explain: "2 mol lactic acid"
+  },
+  {
+    q: "Nhóm OH hemiacetal của glucose có thể phản ứng với CH3OH/HCl khan tạo thành hỗn hợp methyl α-glucoside và methyl β-glucoside",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Cả 5 nhóm OH của glucose đề có thể phản ứng với CH3OH/HCl khan tạo thành hỗn hợp methyl α-glucoside và methyl β-glucoside",
+    a: "sai",
+    explain: "chỉ OH hemiacetal"
+  },
+  {
+    q: "Nhóm OH hemiacetal của glucose có thể phản ứng với CH3OH/HCl khan tạo thành hỗn hợp methyl α-glycoside và methyl β-glycoside",
+    a: "sai",
+    explain: "methyl α-glucoside và methyl β-glucoside"
+  },
+  {
+    q: "Methyl α-glucoside không còn khả năng mở vòng vì không còn nhóm OH hemiacetal",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Methyl α-glucoside có thể mở vòng trong dung dịch nước",
+    a: "sai",
+    explain: "Methyl α-glucoside không còn khả năng mở vòng vì không còn nhóm OH hemiacetal"
+  },
+  {
+    q: "Fructose là đồng phân của glucose",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose có công thức cấu tạo là C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose có công thức cấu tạo là C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>",
+    a: "sai",
+    explain: "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>"
+  },
+  {
+    q: "Fructose có công thức cấu tạo là (C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>",
+    a: "sai",
+    explain: "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>"
+  },
+  {
+    q: "Fructose có M=180 amu",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose có M=162 amu",
+    a: "sai",
+    explain: "180 amu"
+  },
+  {
+    q: "Fructose là chất rắn, tinh thể không màu, tan tốt trong nước, có vị ngọt sắc",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose là chất lỏng, tinh thể không màu, tan tốt trong nước, có vị ngọt sắc",
+    a: "sai",
+    explain: "rắn"
+  },
+  {
+    q: "Fructose là chất rắn, tinh thể màu trắng, tan tốt trong nước, có vị ngọt sắc",
+    a: "sai",
+    explain: "không màu"
+  },
+  {
+    q: "Fructose là chất rắn, tinh thể không màu, không tan trong nước, có vị ngọt sắc",
+    a: "sai",
+    explain: "tan tốt"
+  },
+  {
+    q: "Fructose có vị ngọt hơn glucose",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose có nhiều trong các loại quả ngọt đậm như xoài",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose có nhiều trong mật ong",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose không có trong mật ong",
+    a: "sai",
+    explain: "có nhiều trong mật ong"
+  },
+  {
+    q: "Fructose còn được gọi là đường mật",
+    a: "đúng",
+    explain: "Đúng"
+  },
+  {
+    q: "Fructose còn được gọi là đường nho",
+    a: "sai",
+    explain: "đường mật"
+  },
+  {
+    q: "Fructose còn được gọi là đường mạch nha",
+    a: "sai",
+    explain: "đường mật"
+  },
+  {
+    q: "Fructose còn được gọi là đường mía",
+    a: "sai",
+    explain: "đường mật"
+  },
+  {
+    q: "glucose còn được gọi là đường mía",
+    a: "sai",
+    explain: "đường nho"
+  },
+  {
+    q: "glucose còn được gọi là đường mạch nha",
+    a: "sai",
+    explain: "đường nho"
+  },
+  {
+    q: "Trong mật ong có 40% Fructose, 30% glucose, 30% các chất khác",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Trong mật ong có 30% Fructose, 40% glucose, 30% các chất khác",
+    a: "sai",
+    explain: "40% Fructose, 30% glucose"
+  },
+  {
+    q: "Trong mật ong có 20% Fructose, 10% glucose, 70% các chất khác",
+    a: "sai",
+    explain: "40% Fructose, 30% glucose, 30% các chất khác"
+  },
+  {
+    q: "Trong dung dịch fructose tồn tại ở dạng mạch hở và mạch vòng 5 cạnh. Dạng vòng là chủ yếu",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Trong dung dịch fructose chỉ tồn tại ở dạng mạch mạch vòng 5 cạnh",
+    a: "sai",
+    explain: "tồn tại ở dạng mạch hở và mạch vòng 5 cạnh. Dạng vòng là chủ yếu"
+  },
+  {
+    q: "Trong dung dịch fructose tồn tại ở dạng mạch hở và mạch vòng 6 cạnh. Dạng vòng là chủ yếu",
+    a: "sai",
+    explain: "vòng 5 cạnh"
+  },
+  {
+    q: "Dạng mạch hở và mạch vòng của fructose có thể chuyển hoá qua lại lẫn nhau",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Dạng mạch hở và mạch vòng của fructose không thể chuyển hoá qua lại lẫn nhau",
+    a: "sai",
+    explain: "có thể chuyển hoá qua lại lẫn nhau"
+  },
+  {
+    q: "Trong môi trường base, glucose và frucose có thể chuyển hoá qua lại lẫn nhau",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Trong môi trường acid, glucose và frucose có thể chuyển hoá qua lại lẫn nhau",
+    a: "sai",
+    explain: "môi trường base"
+  },
+  {
+    q: "Trong môi trường base, glucose và frucose không thể chuyển hoá qua lại lẫn nhau",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Trong môi trường base, glucose và frucose có thể chuyển hoá qua lại lẫn nhau",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Trong môi trường acid, glucose và frucose có thể chuyển hoá qua lại lẫn nhau",
+    a: "sai",
+    explain: "môi trường base"
+  },
+  {
+    q: "Fructose có thể phản ứng với thuốc thử Tollens",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fructose có thể phản ứng tráng bạc",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fructose không thể phản ứng với thuốc thử Tollens",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Fructose có thể phản ứng tráng bạc, 1 mol fructose tạo 2 mol Ag",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fructose có thể phản ứng với thuốc thử Tollens do fructose có nhóm -CHO",
+    a: "sai",
+    explain: "do trong môi trường kiềm Fructose bị chuyển hoá thành glucose"
+  },
+  {
+    q: "Fructose có thể phản ứng với Cu(OH)2 ở nhiệt độ thường tạo dung dịch màu xanh lam",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fructose có thể phản ứng với Cu(OH)2 ở nhiệt độ thường tạo dung dịch màu xanh tím",
+    a: "sai",
+    explain: "dung dịch xanh lam"
+  },
+  {
+    q: "Fructose không thể thể phản ứng với Cu(OH)2 ở nhiệt độ thường tạo dung dịch màu xanh lam",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Fructose có thể phản ứng với Cu(OH)2 đun nóng tạo kết tủa đỏ gạch",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fructose có thể phản ứng với Cu(OH)2 đun nóng tạo dung dịch xanh lam",
+    a: "sai",
+    explain: "kết tủa đỏ gạch"
+  },
+  {
+    q: "Fructose không thể phản ứng với dung dịch Br2",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fructose không thể làm mất màu dung dịch Br2 ở nhiệt độ thường",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fructose có thể phản ứng với dung dịch Br2",
+    a: "sai",
+    explain: "không thể"
+  },
+  {
+    q: "Fructose làm mất màu dung dịch Br2 ở nhiệt độ thường",
+    a: "sai",
+    explain: "không thể"
+  },
+  {
+    q: "Có thể phân biệt glucose và frucose bằng dung dịch Br2",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Không thể phân biệt glucose và frucose bằng dung dịch Br2",
+    a: "sai",
+    explain: "có thể, vì glucose làm mất màu dung dịch Br2 còn fructose thì không"
+  },
+  {
+    q: "Có thể phân biệt glucose và frucose bằng thuốc thử tollens",
+    a: "sai",
+    explain: "phân biệt glucose và frucose bằng dung dịch Br2"
+  },
+  {
+    q: "Glucose dư thừa được cơ thể chuyển hoá thành glycogen dự trữ ở gan và cơ",
+    a: "đúng",
+    explain: "đúng"
+  },
+];
+let ds_di=[
+  {
+    q: "Saccharose còn gọi là sucrose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose là một disaccharide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose là một monosaccharide",
+    a: "sai",
+    explain: "disaccharide"
+  },
+  {
+    q: "Saccharose là một polysaccharide",
+    a: "sai",
+    explain: "disaccharide"
+  },
+  {
+    q: "Saccharose là chất rắn, tinh thể không màu, tan tốt trong nước, có vị ngọt",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose là chất lỏng, không màu, tan tốt trong nước, có vị ngọt",
+    a: "sai",
+    explain: "rắn"
+  },
+  {
+    q: "Saccharose là chất rắn, tinh thể màu trắng, tan tốt trong nước, có vị ngọt",
+    a: "sai",
+    explain: "không màu"
+  },
+  {
+    q: "Saccharose có nhiều trong mía, củ cải đường, hoa thốt nốt",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose còn gọi là đường mía",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose còn gọi là đường mật",
+    a: "sai",
+    explain: "đường mía"
+  },
+  {
+    q: "Saccharose chỉ có cấu tạo mạch vòng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose tồn tại cả dạng mạch vòng và mạch hở, trong đó mạch vọng chiếm chủ yếu",
+    a: "sai",
+    explain: "Saccharose chỉ có cấu tạo mạch vòng"
+  },
+  {
+    q: "Saccharose do 1 đơn vị α-glucose và β-fructose tạo thành",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose do 1 đơn vị β-glucose và β-fructose tạo thành",
+    a: "sai",
+    explain: "α-glucose và β-fructose"
+  },
+  {
+    q: "Saccharose do 2 đơn vị α-glucose tạo thành",
+    a: "sai",
+    explain: "α-glucose và β-fructose"
+  },
+  {
+    q: "Saccharose do 1 đơn vị α-glucose và β-fructose liên kết với nhau bằng liên kết α-1,2-glycoside",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose do 1 đơn vị α-glucose và β-fructose liên kết với nhau bằng liên kết α-1,2-glucoside",
+    a: "sai",
+    explain: "α-1,2-glycoside"
+  },
+  {
+    q: "Saccharose do 1 đơn vị α-glucose và β-fructose liên kết với nhau bằng liên kết α-1,4-glycoside",
+    a: "sai",
+    explain: "α-1,2-glycoside"
+  },
+  {
+    q: "Saccharose do 1 đơn vị α-glucose và β-fructose liên kết với nhau bằng liên kết α-1,6-glycoside",
+    a: "sai",
+    explain: "α-1,2-glycoside"
+  },
+  {
+    q: "Saccharose do 1 đơn vị α-glucose và α-fructose liên kết với nhau bằng liên kết α-1,2-glycoside",
+    a: "sai",
+    explain: "α-glucose và β-fructose"
+  },
+  {
+    q: "Saccharose do 1 đơn vị α-glucose và α-fructose liên kết với nhau qua nguyên tử O",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose có phản ứng với Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh lam",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose không thể phản ứng với Cu(OH)2 ở nhiệt độ thường",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Saccharose có phản ứng với Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh tím",
+    a: "sai",
+    explain: "xanh lam"
+  },
+  {
+    q: "Saccharose có phản ứng với thuốc thử Tollens",
+    a: "sai",
+    explain: "saccharose không phản ứng với thuốc thử tollens"
+  },
+  {
+    q: "Saccharose có thể phản ứng với Cu(OH)2 đun nóng tạo kết tủa đỏ gạch",
+    a: "sai",
+    explain: "Saccharose phản ứng với Cu(OH)2 đun nóng vẫn tạo dung dịch xanh lam vì saccharose không có nhóm CHO"
+  },
+  {
+    q: "Saccharose có thể làm mất màu dung dịch Br2",
+    a: "sai",
+    explain: "saccharose không phản ứng với Br2"
+  },
+  {
+    q: "Saccharose có phản ứng trực tiếp với thuốc thử Tollens, 1 mol saccharose tạo 4 mol Ag",
+    a: "sai",
+    explain: "saccharose không phản ứng với thuốc thử tollens"
+  },
+  {
+    q: "Saccharose có phản ứng với thuỷ phân trong môi trường acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose có phản ứng với thuỷ phân trong môi trường enzyme",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose có phản ứng với thuỷ phân trong môi trường kiềm",
+    a: "sai",
+    explain: "bị thuỷ phân trong acid hoặc enzyme"
+  },
+  {
+    q: "Saccharose có phản ứng với thuỷ phân trong môi trường acid, enzyme hoặc kiềm",
+    a: "sai",
+    explain: "chỉ bị thuỷ phân trong acid hoặc enzyme"
+  },
+  {
+    q: "Saccharose thuỷ phân tạo ra glucose và fructose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Thuỷ phân hoàn toàn 1 mol saccharose trong môi trường acid sao đó đem sản tráng bạc thu được 4 mol Ag ",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Thuỷ phân hoàn toàn 1 mol saccharose trong môi trường acid sao đó đem sản tráng bạc thu được 2 mol Ag ",
+    a: "sai",
+    explain: "4 mol Ag"
+  },
+  {
+    q: "Saccharose là đồng phân của maltose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose có công thức là C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Saccharose có công thức là C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>",
+    a: "sai",
+    explain: "C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>"
+  },
+  {
+    q: "Maltose có công thức là C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose có công thức là C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>",
+    a: "sai",
+    explain: "C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>"
+  },
+  {
+    q: "Maltose là đồng phân của saccharose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose do 2 đơn vị glucose liên kết với nhau bằng liên kết α-1,4-glycoside ",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose do 1 đơn vị glucose và 1 đơn vị fructose liên kết với nhau bằng liên kết α-1,4-glycoside ",
+    a: "sai",
+    explain: "2 đơn vị glucose"
+  },
+  {
+    q: "Maltose do 2 đơn vị glucose liên kết với nhau bằng liên kết α-1,4-glycoside ",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose do 2 đơn vị glucose liên kết với nhau bằng liên kết α-1,2-glycoside ",
+    a: "sai",
+    explain: "α-1,4-glycoside"
+  },
+  {
+    q: "Maltose do 2 đơn vị glucose liên kết với nhau bằng liên kết α-1,6-glycoside ",
+    a: "sai",
+    explain: "α-1,4-glycoside"
+  },
+  {
+    q: "Maltose do 2 đơn vị glucose liên kết với nhau bằng liên kết β-1,4-glycoside ",
+    a: "sai",
+    explain: "α-1,4-glycoside"
+  },
+  {
+    q: "Trong phân tử saccharose có nhóm OH hemiacetal",
+    a: "sai",
+    explain: "không có"
+  },
+  {
+    q: "Trong phân tử maltose có nhóm OH hemiacetal",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Trong phân tử maltose không có nhóm OH hemiacetal",
+    a: "sai",
+    explain: "có"
+  },
+  {
+    q: "Maltose có dạng vòng và dạng mở vòng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose chỉ tồn tại ở dạng vòng",
+    a: "sai",
+    explain: "cả dạng vòng và mở vòng"
+  },
+  {
+    q: "1 mol maltose có thể phản ứng với thuốc thử tollens tạo ra 2 mol Ag",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose không thể phản ứng với thuốc thử tollens",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Maltose có thể phản ứng với Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh lam",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose có thể phản ứng với Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh tím",
+    a: "sai",
+    explain: "xanh lam"
+  },
+  {
+    q: "Maltose không thể phản ứng với Cu(OH)2 ở nhiệt độ thường",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Maltose có thể phản ứng với Cu(OH)2 đun nóng tạo kết tủa đỏ gạch",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose không thể phản ứng với Cu(OH)2 đun nóng tạo kết tủa đỏ gạch",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Maltose có thể phản ứng với dung dịch Br2",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose có thể làm mất màu dung dịch Br2",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose không thể làm mất màu dung dịch Br2",
+    a: "sai",
+    explain: "có thể"
+  },
+  {
+    q: "Maltose bị thuỷ phân trong môi trường acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose bị thuỷ phân trong môi trường enzyme",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Maltose bị thuỷ phân trong môi trường kiềm",
+    a: "sai",
+    explain: "acid hoặc enzyme"
+  },
+  {
+    q: "Maltose bị thuỷ phân trong môi trường acid, base, enzyme",
+    a: "sai",
+    explain: "acid hoặc enzyme"
+  },
+];
+let ds_poly=[
+  {
+    q: "Tinh bột có công thức là (C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột có công thức là (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>)<sub>n</sub>",
+    a: "sai",
+    explain: "(C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>"
+  },
+  {
+    q: "Tinh bột có công thức là C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>",
+    a: "sai",
+    explain: "(C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>"
+  },
+  {
+    q: "Tinh bột có M=162n (M khoảng vài nghìn - vài trăm nghìn amu)",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột có M=180n (M khoảng vài nghìn - vài trăm nghìn amu)",
+    a: "sai",
+    explain: "162n"
+  },
+  {
+    q: "Tinh bột và cellulose là đồng phân",
+    a: "sai",
+    explain: "không phải"
+  },
+  {
+    q: "Tinh bột là chất rắn màu trắng, vô định hình",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột là chất rắn màu trắng, có dạng sợi",
+    a: "sai",
+    explain: "tinh bột không có dạng sợi"
+  },
+  {
+    q: "Tinh bột ít tan trong nước lạnh, tan nhiều trong nước nóng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột hoàn toàn không tan trong nước",
+    a: "sai",
+    explain: "Tinh bột ít tan trong nước lạnh, tan nhiều trong nước nóng"
+  },
+  {
+    q: "Tinh bột ít tan trong nước nóng, tan nhiều trong nước lạnh",
+    a: "sai",
+    explain: "Tinh bột ít tan trong nước lạnh, tan nhiều trong nước nóng"
+  },
+  {
+    q: "Khi tan trong nước tinh bột sẽ trở thành chất lỏng keo nhớt gọi là hồ tinh bột",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột có nhiều trong gạo, khoai, sắn, chuối xanh",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột có nhiều trong nho, mật ong",
+    a: "sai",
+    explain: "có nhiều trong gạo, khoai, sắn, chuối xanh"
+  },
+  {
+    q: "Tinh bột là lương thực cơ bản của con người",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột được dùng làm chất kết dính trong công nghiệp giấy, dệt may",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột gồm amylose và amylopectin",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột gồm amylose(20-30%) và amylopectin(70-80%)",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột gồm amylose(70-80%) và amylopectin(20-30%)",
+    a: "sai",
+    explain: "amylose(20-30%) và amylopectin(70-80%)"
+  },
+  {
+    q: "Amylose có cấu trúc không phân nhánh, xoắn lại",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amylose có cấu trúc phân nhánh, xoắn lại",
+    a: "sai",
+    explain: "không phân nhánh"
+  },
+  {
+    q: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amylose do các đơn vị β-glucose liên kết với nhau theo liên kết β-1,4-glycoside",
+    a: "sai",
+    explain: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside"
+  },
+  {
+    q: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,6-glycoside",
+    a: "sai",
+    explain: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside"
+  },
+  {
+    q: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,2-glycoside",
+    a: "sai",
+    explain: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside"
+  },
+  {
+    q: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside và α-1,6-glycoside",
+    a: "sai",
+    explain: "Amylose do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside"
+  },
+  {
+    q: "Amylopectin do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside và α-1,6-glycoside",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amylopectin do các đơn vị α-glucose chỉ liên kết với nhau theo liên kết α-1,4-glycoside",
+    a: "sai",
+    explain: "Amylopectin do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside và α-1,6-glycoside"
+  },
+  {
+    q: "Amylopectin do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,2-glycoside và α-1,6-glycoside",
+    a: "sai",
+    explain: "Amylopectin do các đơn vị α-glucose liên kết với nhau theo liên kết α-1,4-glycoside và α-1,6-glycoside"
+  },
+  {
+    q: "Tinh bột có cấu trúc phân nhánh không thể kéo dài thành sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột có thể bị thuỷ phân trong acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột có thể bị thuỷ phân trong enzyme",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột có thể bị thuỷ phân trong base",
+    a: "sai",
+    explain: "acid hoặc enzyme"
+  },
+  {
+    q: "Tinh bột có thể bị thuỷ phân trong acid, enzyme hoặc base",
+    a: "sai",
+    explain: "acid hoặc enzyme"
+  },
+  {
+    q: "Ở khoang miệng tinh bột bị thuỷ phân thành dextrin và maltose",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở khoang miệng tinh bột bị thuỷ phân thành glucose",
+    a: "sai",
+    explain: "Ở khoang miệng tinh bột bị thuỷ phân thành dextrin và maltose"
+  },
+  {
+    q: "Tinh bột có phản ứng màu với I2",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột tác dụng với I2 ở nhiệt độ thường tạo hợp chất bọc màu xanh tím",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tinh bột tác dụng với I2 ở nhiệt độ thường tạo hợp chất bọc màu xanh lam",
+    a: "sai",
+    explain: "xanh tím"
+  },
+  {
+    q: "Tinh bột tác dụng với I2 ở nhiệt độ thường tạo hợp chất bọc màu vàng",
+    a: "sai",
+    explain: "xanh tím"
+  },
+  {
+    q: "Tinh bột tác dụng với I2 ở nhiệt độ thường tạo hợp chất bọc màu xanh tím, khi đun nóng màu xanh tím nhạt dần, để nguội màu xanh tím trở lại",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở nhiệt độ thường, tinh bột chứa amylose ở dạng xoắn hấp phụ Ì tạo hợp chất bọc có màu xanh tím",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở nhiệt độ thường, tinh bột chứa amylopectin ở dạng xoắn hấp phụ Ì tạo hợp chất bọc có màu xanh tím",
+    a: "sai",
+    explain: "amylose"
+  },
+  {
+    q: "Ở cây xanh, tinh bột được tổng hợp từ phản ứng quang hợp",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có công thức là (C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có công thức là (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>)<sub>n</sub>",
+    a: "sai",
+    explain: "(C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>"
+  },
+  {
+    q: "Cellulose có M=162n (M khoảng vài trăm nghìn đến vài triệu amu)",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có M=180n (M khoảng vài trăm nghìn đến vài triệu amu)",
+    a: "sai",
+    explain: "162n"
+  },
+  {
+    q: "Cellulose là đồng phân của tinh bột",
+    a: "sai",
+    explain: "cellulose không phải đồng phân của tinh bột"
+  },
+  {
+    q: "Cellulose là chất rắn màu trắng dạng sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose là chất rắn không màu dạng sợi",
+    a: "sai",
+    explain: "màu trắng"
+  },
+  {
+    q: "Cellulose không tan trong nước kể cả đun nóng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose tan tốt trong nước",
+    a: "sai",
+    explain: "không tan trong nước kể cả đun nóng"
+  },
+  {
+    q: "Cellulose không tan trong nước ở nhiệt độ thường nhưng tan kém trong nước khi đun nóng",
+    a: "sai",
+    explain: "không tan trong nước kể cả đun nóng"
+  },
+  {
+    q: "Cellulose không tan trong các dung môi thông thường như ethanol, hexane, benzene",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose không tan trong nước kể, chỉ tan trong các dung môi như hexane, benzene",
+    a: "sai",
+    explain: "Cellulose không tan trong các dung môi thông thường như ethanol, hexane, benzene"
+  },
+  {
+    q: "Cellulose chỉ tan trong một vài dung môi đặc biệt như nước schweizer",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose không tan trong nước schweizer",
+    a: "sai",
+    explain: "Cellulose tan trong nước schweizer"
+  },
+  {
+    q: "Tinh bột có phản ứng với cu(oh)2 tạo dung dịch xanh lam",
+    a: "sai",
+    explain: "Tinh bột không có phản ứng với cu(oh)2 tạo dung dịch xanh lam"
+  },
+  {
+    q: "Tinh bột có phản ứng với cu(oh)2 đung nóng tạo kết tủa đỏ gạch",
+    a: "sai",
+    explain: "Tinh bột không có phản ứng với cu(oh)2"
+  },
+  {
+    q: "Tinh bột có phản ứng tráng bạc",
+    a: "sai",
+    explain: "Tinh bột không có phản ứng tráng bạc"
+  },
+  {
+    q: "Tinh bột có phản ứng với cu(oh)2 đung nóng tạo kết tủa đỏ gạch",
+    a: "sai",
+    explain: "Tinh bột không có phản ứng với cu(oh)2"
+  },
+  {
+    q: "Cellulose được dùng làm vật liệu xây dụng, sản xuất giấy, thuốc súng không khói",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose được dùng làm tơ visco, tơ acetate",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose được dùng làm vật liệu xây dụng, sản xuất giấy, thuốc súng không khói",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose do các đơn vị β-glucose liên kết với nhau bằng liên kết β-1,4-glycoside tạo thành",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose do các đơn vị α-glucose liên kết với nhau bằng liên kết α-1,4-glycoside tạo thành",
+    a: "sai",
+    explain: "Cellulose do các đơn vị β-glucose liên kết với nhau bằng liên kết β-1,4-glycose tạo thành"
+  },
+  {
+    q: "Cellulose do các đơn vị β-glucose liên kết với nhau bằng liên kết β-1,6-glycoside tạo thành",
+    a: "sai",
+    explain: "Cellulose do các đơn vị β-glucose liên kết với nhau bằng liên kết β-1,4-glycose tạo thành"
+  },
+  {
+    q: "Cellulose do các đơn vị β-glucose liên kết với nhau bằng liên kết β-1,2-glycoside tạo thành",
+    a: "sai",
+    explain: "Cellulose do các đơn vị β-glucose liên kết với nhau bằng liên kết β-1,4-glycose tạo thành"
+  },
+  {
+    q: "Cellulose có cấu trúc không phân nhánh có thể kéo dài thành sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có cấu trúc phân nhánh",
+    a: "sai",
+    explain: "không phân nhánh"
+  },
+  {
+    q: "Mỗi mắt xích cellulose có 3 nhóm OH nên có thể viết thành [C<sub>6</sub>H<sub>7</sub>O<sub>2</sub>(OH)<sub>3</sub>]<sub>n</sub>",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có phản ứng với HNO3 đặc xúc tác H2SO4 tạo thành cellulose trinitrate",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có thể bị thuỷ phân trong môi trường acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có thể bị thuỷ phân trong môi trường enzyme",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Cellulose có thể bị thuỷ phân trong môi trường base",
+    a: "sai",
+    explain: "môi trường acid hoặc enzyme"
+  },
+  {
+    q: "Con người có thể tiêu hoá cellulose",
+    a: "sai",
+    explain: "Con bò mới tiêu hoá được cellulose"
+  },
+  {
+    q: "Cellulose có phản ứng với cu(oh)2 tạo dung dịch xanh lam",
+    a: "sai",
+    explain: "Cellulose không có phản ứng với cu(oh)2 tạo dung dịch xanh lam"
+  },
+  {
+    q: "Cellulose có phản ứng với cu(oh)2 đung nóng tạo kết tủa đỏ gạch",
+    a: "sai",
+    explain: "Cellulose không có phản ứng với cu(oh)2"
+  },
+  {
+    q: "Cellulose có phản ứng tráng bạc",
+    a: "sai",
+    explain: "Cellulose không có phản ứng tráng bạc"
+  },
+  {
+    q: "Cellulose có phản ứng với I2 tạo dung dịch xanh tím",
+    a: "sai",
+    explain: "Cellulose có phản ứng màu với I2"
+  },
+
+]
+let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo,...ds_mono, ...ds_di, ...ds_poly] ;
 localStorage.removeItem("Data");
+document.getElementById("ds-poly").addEventListener("click", ()=>{
+  localStorage.setItem("Data", JSON.stringify(ds_poly));
+  window.location.href = "test2.html";
+});
+document.getElementById("ds-di").addEventListener("click", ()=>{
+  localStorage.setItem("Data", JSON.stringify(ds_di));
+  window.location.href = "test2.html";
+});
+document.getElementById("ds-mono").addEventListener("click", ()=>{
+  localStorage.setItem("Data", JSON.stringify(ds_mono));
+  window.location.href = "test2.html";
+});
 document.getElementById("ds-random").addEventListener("click", ()=>{
     localStorage.setItem("Data", JSON.stringify(ds_random));
     window.location.href = "test2.html";

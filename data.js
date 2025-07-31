@@ -130,7 +130,7 @@ let amine =[
     {
         img: "img/data/amine/18.N,N-dimethylethanamine.svg",
         q: "Tên gốc chức của chất sau là gì",
-        a: "ethyldimethylaimne"
+        a: "ethyldimethylamine"
     },
      {
         img: "img/data/amine/19.N-ethylethanamine.svg",
