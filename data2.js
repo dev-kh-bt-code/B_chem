@@ -3408,9 +3408,481 @@ let ds_amine=[
     a: "đúng",
     explain: "đúng"
   },
-]
-let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo,...ds_mono, ...ds_di, ...ds_poly,...ds_amine] ;
+];
+let ds_aminoacid=[
+  {
+    q: "Amino acid là hợp chất hữu cơ tạp chức trong phân tử chứa đồng thời nhóm amino (-NH2) và nhóm carboxyl (-COOH)",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amino acid là hợp chất hữu cơ đa chức trong phân tử chứa đồng thời nhóm amino (-NH2) và nhóm carboxyl (-COOH)",
+    a: "sai",
+    explain: "tạp chức"
+  },
+  {
+    q: "Các amino acid thiên nhiên hầu hết là là α-amino acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Các amino acid thiên nhiên đều là β-amino acid",
+    a: "sai",
+    explain: "α-amino acid"
+  },
+  {
+    q: "Có khoảng 20 loại amino acid cấu thành protein trong cơ thể (amino acid tiêu chuẩn)",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Có khoảng 10 loại amino acid cấu thành protein trong cơ thể (amino acid tiêu chuẩn)",
+    a: "sai",
+    explain: "20 loại"
+  },
+  {
+    q: "Có khoảng 25 loại amino acid cấu thành protein trong cơ thể (amino acid tiêu chuẩn)",
+    a: "sai",
+    explain: "20 loại"
+  },
+  {
+    q: "Amino acid thiết yếu cơ thể không tự tổng hợp được",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amino acid thiết yếu cơ thể tự tổng hợp được",
+    a: "sai",
+    explain: "không tự tổng hợp được"
+  },
+  {
+    q: "Amino acid không thiết yếu cơ thể tự tổng hợp được",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amino acid không thiết yếu cơ thể không tự tổng hợp được",
+    a: "sai",
+    explain: "tự tổng hợp được"
+  },
+  {
+    q: "Các amino acid tồn tại ở thể rắn",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Các amino acid tồn tại ở thể lỏng",
+    a: "sai",
+    explain: "rắn"
+  },
+  {
+    q: "Ở điều kiện thường các amino acid tồn tại ở thể rắn do chúng tồn tại ở dạng ion lưỡng cực=>giữa các amino acid tồn tại liên kết ion",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ở điều kiện thường các amino acid tồn tại ở thể rắn do chúng có phân tử khối lớn",
+    a: "sai",
+    explain: "do chúng tồn tại ở dạng ion lưỡng cực"
+  },
+  {
+    q: "Ở điều kiện thường các amino acid tồn tại ở dạng ion lưỡng cực",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glycine có M=75",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly có M=147",
+    a: "sai",
+    explain: "75"
+  },
+  {
+    q: "Glycine có M=70",
+    a: "sai",
+    explain: "75"
+  },
+  {
+    q: "Gly có M=60",
+    a: "sai",
+    explain: "75"
+  },
+  {
+    q: "Alanine có M=89",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Alanine có M=80",
+    a: "sai",
+    explain: "89"
+  },
+  {
+    q: "Ala có M=117",
+    a: "sai",
+    explain: "89"
+  },
+  {
+    q: "Ala có M=75",
+    a: "sai",
+    explain: "89"
+  },
+  {
+    q: "Valine có M=117",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Val có M=180",
+    a: "sai",
+    explain: "117"
+  },
+  {
+    q: "Val có M=89",
+    a: "sai",
+    explain: "117"
+  },
+  {
+    q: "Glutamic acid có M=147",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glutamic acid có M=146",
+    a: "sai",
+    explain: "147"
+  },
+  {
+    q: "Glu có M=180",
+    a: "sai",
+    explain: "147"
+  },
+  {
+    q: "Glu có M=89",
+    a: "sai",
+    explain: "147"
+  },
+  {
+    q: "Lysine có M=146",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Lysine có M=147",
+    a: "sai",
+    explain: "146"
+  },
+  {
+    q: "Lysine có M=117",
+    a: "sai",
+    explain: "146"
+  },
+  {
+    q: "Amino acid có tính lưỡng tính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly có tính lưỡng tính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ala có tính lưỡng tính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Val có tính lưỡng tính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glu có tính lưỡng tính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Lys có tính lưỡng tính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly không làm đổi màu quỳ tím ẩm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Val không làm đổi màu quỳ tím ẩm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Ala không làm đổi màu quỳ tím ẩm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly làm quỳ tím ẩm hoá xanh",
+    a: "sai",
+    explain: "Không làm đổi màu quỳ tím"
+  },
+  {
+    q: "Gly làm quỳ tím ẩm hoá đỏ",
+    a: "sai",
+    explain: "Không làm đổi màu quỳ tím"
+  },
+  {
+    q: "Ala làm quỳ tím ẩm hoá xanh",
+    a: "sai",
+    explain: "Không làm đổi màu quỳ tím"
+  },
+  {
+    q: "Ala làm quỳ tím ẩm hoá đỏ",
+    a: "sai",
+    explain: "Không làm đổi màu quỳ tím"
+  },
+  {
+    q: "Val làm quỳ tím ẩm hoá xanh",
+    a: "sai",
+    explain: "Không làm đổi màu quỳ tím"
+  },
+  {
+    q: "Val làm quỳ tím ẩm hoá đỏ",
+    a: "sai",
+    explain: "Không làm đổi màu quỳ tím"
+  },
+  {
+    q: "Glu làm quỳ tím ẩm hoá hồng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glu không làm đổi màu quỳ tím",
+    a: "sai",
+    explain: "Màu hồng"
+  },
+  {
+    q: "Glu làm quỳ tím ẩm đổi thành màu xanh",
+    a: "sai",
+    explain: "Màu hồng"
+  },
+  {
+    q: "Lys làm quỳ tím ẩm hoá xanh",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Lys không làm đổi màu quỳ tím ẩm",
+    a: "sai",
+    explain: "hoá xanh"
+  },
+  {
+    q: "Lys làm quỳ tím ẩm hoá hồng",
+    a: "sai",
+    explain: "hoá xanh"
+  },
+  {
+    q: "Amino acid có khả năng tham gia phản ứng ester hoá với xúc tác HCl khan",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Amino acid có khả năng tham gia phản ứng trùng ngưng tạo thành polymer và giải phóng nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly, ala, val có pI khoảng 6",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Lys có pI khoảng 9.7",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glu có pI khoảng 3.22",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt gly trong điện trường trong pH=6, gly không dịch chuyển",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt ala trong điện trường trong pH=6, ala không dịch chuyển",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt val trong điện trường trong pH=6, val không dịch chuyển",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt glu trong điện trường trong pH=3, glu không dịch chuyển",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt lys trong điện trường trong pH=9, lys không dịch chuyển",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt lys trong điện trường trong pH=9, lys dịch chuyển về phía cực dương",
+    a: "sai",
+    explain: "hầu như không di chuyển"
+  },
+  {
+    q: "Khi đặt lys trong điện trường trong pH=9, lys dịch chuyển về phía cực âm",
+    a: "sai",
+    explain: "hầu như không di chuyển"
+  },
+  {
+    q: "Khi đặt glu trong điện trường trong pH=3, glu dịch chuyển về cực âm",
+    a: "sai",
+    explain: "hầu như không di chuyển"
+  },
+  {
+    q: "Khi đặt glu trong điện trường trong pH=3, glu dịch chuyển về cực dương",
+    a: "sai",
+    explain: "hầu như không di chuyển"
+  },
+  {
+    q: "Khi đặt gly trong điện trường trong pH=3, gly dịch chuyển về cực âm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt ala trong điện trường trong pH=3, ala dịch chuyển về cực âm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt val trong điện trường trong pH=3, val dịch chuyển về cực âm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt gly trong điện trường trong pH=3, gly dịch chuyển về cực dương",
+    a: "sai",
+    explain: "âm"
+  },
+  {
+    q: "Khi đặt val trong điện trường trong pH=3, val dịch chuyển về cực dương",
+    a: "sai",
+    explain: "âm"
+  },
+  {
+    q: "Khi đặt ala trong điện trường trong pH=3, ala dịch chuyển về cực dương",
+    a: "sai",
+    explain: "âm"
+  },
+  {
+    q: "Khi đặt gly trong điện trường trong pH=11, gly dịch chuyển về cực dương",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt ala trong điện trường trong pH=11, ala dịch chuyển về cực dương",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt val trong điện trường trong pH=11, val dịch chuyển về cực dương",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt gly trong điện trường trong pH=11, gly dịch chuyển về cực âm",
+    a: "sai",
+    explain: "dương"
+  },
+  {
+    q: "Khi đặt ala trong điện trường trong pH=11, ala dịch chuyển về cực âm",
+    a: "sai",
+    explain: "dương"
+  },
+  {
+    q: "Khi đặt val trong điện trường trong pH=11, val dịch chuyển về cực âm",
+    a: "sai",
+    explain: "dương"
+  },
+  {
+    q: "Khi đặt glu trong điện trường trong pH=1, glu dịch chuyển về cực âm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt glu trong điện trường trong pH=1, glu dịch chuyển về cực dương",
+    a: "sai",
+    explain: "âm"
+  },
+  {
+    q: "Khi đặt glu trong điện trường trong pH=6, glu dịch chuyển về cực dương",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt glu trong điện trường trong pH=6, glu dịch chuyển về cực âm",
+    a: "sai",
+    explain: "dương"
+  },
+  {
+    q: "Khi đặt lys trong điện trường trong pH=6, lys dịch chuyển về cực âm",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt lys trong điện trường trong pH=6, lys dịch chuyển về cực dương",
+    a: "sai",
+    explain: "âm"
+  },
+  {
+    q: "Khi đặt lys trong điện trường trong pH=12, lys dịch chuyển về cực dương",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Khi đặt lys trong điện trường trong pH=12, lys dịch chuyển về cực âm",
+    a: "sai",
+    explain: "dương"
+  },
+  {
+    q: "Muối monosodium của glutamic acid được dùng làm bột ngọt, mì chính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glutamic acid được dùng làm bột ngọt, mì chính",
+    a: "sai",
+    explain: "Muối monosodium của glutamic acid"
+  },
+  {
+    q: "Muối monosodium của glutamic acid được dùng làm bột ngọt, mì chính",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Glutamic acid được dùng làm bột ngọt, mì chính",
+    a: "sai",
+    explain: "Muối monosodium của glutamic acid"
+  },
+
+];
+let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo,...ds_mono, ...ds_di, ...ds_poly,...ds_amine, ...ds_aminoacid] ;
 localStorage.removeItem("Data");
+document.getElementById("ds-aminoacid").addEventListener("click", ()=>{
+  localStorage.setItem("Data", JSON.stringify(ds_aminoacid));
+  window.location.href = "test2.html";
+});
 document.getElementById("ds-amine").addEventListener("click", ()=>{
   localStorage.setItem("Data", JSON.stringify(ds_amine));
   window.location.href = "test2.html";
