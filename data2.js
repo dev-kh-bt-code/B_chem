@@ -1,4 +1,19 @@
 let ds_ester =[
+  {
+    q: "Ester C<sub>n</sub>H<sub>2n</sub>O<sub>2</sub> có 2<sup>n-2</sup> (n<5) đồng phân",
+    a: "đúng",
+    explain: "đúng"
+},
+{
+  q: "Ester C<sub>n</sub>H<sub>2n</sub>O<sub>2</sub> có 2<sup>n-2</sup> (n<5) đồng phân",
+  a: "đúng",
+  explain: "đúng"
+},
+{
+  q: "Ester C<sub>n</sub>H<sub>2n</sub>O<sub>2</sub> có 2<sup>n-1</sup> (n<5) đồng phân",
+  a: "sai",
+  explain: "2<sup>n-2</sup>"
+},
     {
         q: "Khi thay thế nhóm -OH ở nhóm -COOH của carboxylic acid bằng nhóm -OR' thì được ester, trong đó R' là gốc hydrocarbon",
         a: "đúng",
@@ -3875,10 +3890,609 @@ let ds_aminoacid=[
     a: "sai",
     explain: "Muối monosodium của glutamic acid"
   },
+  {
+    q: "Amino acid có phản ứng màu biuret",
+    a: "sai",
+    explain: "Amino acid không có phản ứng màu biuret"
+  },
 
 ];
-let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo,...ds_mono, ...ds_di, ...ds_poly,...ds_amine, ...ds_aminoacid] ;
+let ds_protein =[
+  {
+    q: "Liên kết peptide là liên kết CO-NH được hình thành giữa 2 đơn vị α-aminoacid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Liên kết peptide là liên kết CO-NH bất kì",
+    a: "sai",
+    explain: "Liên kết peptide là liên kết CO-NH được hình thành giữa 2 đơn vị α-aminoacid"
+  },
+  {
+    q: "Liên kết peptide là liên kết CO-NH được hình thành giữa 2 đơn vị β-aminoacid",
+    a: "sai",
+    explain: "Liên kết peptide là liên kết CO-NH được hình thành giữa 2 đơn vị α-aminoacid"
+  },
+  {
+    q: "Liên kết peptide là liên kết COO-NH2 được hình thành giữa 2 đơn vị α-aminoacid",
+    a: "sai",
+    explain: "Liên kết peptide là liên kết CO-NH được hình thành giữa 2 đơn vị α-aminoacid"
+  },
+  {
+    q: "Gly-ala là dipeptide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly-ala-gly là tripeptide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly-ala-gly là dipeptide",
+    a: "sai",
+    explain: "dipeptde"
+  },
+  {
+    q: "Gly-ala-gly là có 2 liên kết peptide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly-ala-gly là có 3 liên kết peptide",
+    a: "sai",
+    explain: "2"
+  },
+  {
+    q: "Gly-ala-val là tripeptide đầu N là gly, đầu C là val",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Gly-ala-val là tripeptide đầu C là gly, đầu N là val",
+    a: "sai",
+    explain: "đầu N là gly, đầu C là val"
+  },
+  {
+    q: "Gly-ala và ala-gly là 2 chất khác nhau",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "n-peptide chứa k đơn vị giống nhau có n!/(k!) đồng phân",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "n-peptide chứa k đơn vị giống nhau có n!/(k!) đồng phân",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "n-peptide chứa k đơn vị giống nhau có n! đồng phân",
+    a: "sai",
+    explain: "n!/(k!)"
+  },
+  {
+    q: "Peptide gly-gly-ala-ala có 4!/(2!.2!) đồng phân",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Peptide gly-gly-ala-ala có 4! đồng phân",
+    a: "sai",
+    explain: "4!/(2!.2!)"
+  },
+  {
+    q: "Từ x α-amino acid tạo ra được tối đa x<sub>n</sub> n-peptide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Từ x α-amino acid tạo ra được tối đa x<sub>n+1</sub> n-peptide",
+    a: "sai",
+    explain: "x<sub>n</sub>"
+  },
+  {
+    q: "Từ x α-amino acid tạo ra được tối đa n<sub>x</sub> n-peptide",
+    a: "sai",
+    explain: "x<sub>n</sub>"
+  },
+  {
+    q: "Từ gly và ala tạo ra được tối đa 2<sub>3</sub> tripeptide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Từ gly và ala tạo ra được tối đa 3<sub>2</sub> tripeptide",
+    a: "sai",
+    explain: "2<sub>3</sub>"
+  },
+  {
+    q: "Peptide có thể bị thuỷ phân trong môi trường acid hoặc base",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Peptide có thể bị thuỷ phân trong môi trường acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Peptide có thể bị thuỷ phân trong môi trường base",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Peptide chỉ có thể bị thuỷ phân trong môi trường acid không bị thuỷ phân trong base",
+    a: "sai",
+    explain: "Peptide có thể bị thuỷ phân trong môi trường acid hoặc base"
+  },
+  {
+    q: "Tất cả peptide có từ 2 liên kết peptide trở lên có phản ứng màu biuret ",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tất cả peptide có từ 2 liên kết peptide trở lên có phản ứng với Cu(OH)2 tạo sản phẩm màu tím ",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tất cả peptide có từ 2 liên kết peptide trở lên có phản ứng với Cu(OH)2 tạo sản phẩm màu xanh ",
+    a: "sai",
+    explain: "màu tím"
+  },
+  {
+    q: "Tất cả peptide có từ 2 liên kết peptide trở lên có phản ứng với Cu(OH)2 tạo kết tủa vàng",
+    a: "sai",
+    explain: "màu tím"
+  },
+  {
+    q: "Tất cả peptide có phản ứng với Cu(OH)2 tạo sản phẩm màu tím ",
+    a: "sai",
+    explain: "trừ dipeptide"
+  },
+  {
+    q: "Dipeptide không có phản ứng màu biuret",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Dipeptide không có phản ứng với Cu(OH)2 để tạo sản phẩm màu tím",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Dipeptide không có phản ứng màu biuret",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Dipeptide có phản ứng màu biuret",
+    a: "sai",
+    explain: "không có"
+  },
+  {
+    q: "Tripeptide không có phản ứng màu biuret",
+    a: "sai",
+    explain: "dipeptide mới không có phản ứng màu biuret"
+  },
+  {
+    q: "Dipeptide phản ứng với Cu(OH)2 để tạo sản phẩm màu tím",
+    a: "sai",
+    explain: "dipeptide không có phản ứng màu biuret"
+  },
+  {
+    q: "Dipeptide không có phản ứng màu biuret",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein là hợp chất cao phân tử được hình thành từ 1 hoặc nhiều chuỗi polypeptide",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein đơn giản được cấu tạo chỉ từ các α-amino acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein đơn giản được cấu tạo chỉ từ các β-amino acid",
+    a: "sai",
+    explain: "Protein đơn giản được cấu tạo chỉ từ các α-amino acid"
+  },
+  {
+    q: "Protein đơn giản được cấu tạo từ các α-amino acid và các thành phần phi protein",
+    a: "sai",
+    explain: "Protein đơn giản được cấu tạo chỉ từ các α-amino acid"
+  },
+  {
+    q: "Protein phức tạp gồm protein đơn giản liên kết với các thành phần phi protein như nucleic acid, carbohydrate, lipid, kim loại,...",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein phức tạp được cấu tạo chỉ từ các α-amino acid",
+    a: "sai",
+    explain: "Protein phức tạp gồm protein đơn giản liên kết với các thành phần phi protein như nucleic acid, carbohydrate, lipid, kim loại,..."
+  },
+  {
+    q: "Insulin, albumin, Fibroin là các protein đơn giản",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Insulin, albumin, Fibroin là các protein phức tạp",
+    a: "sai",
+    explain: "đơn giản"
+  },
+  {
+    q: "Insulin là protein phức tạp",
+    a: "sai",
+    explain: "đơn giản"
+  },
+  {
+    q: "Albumin là protein phức tạp",
+    a: "sai",
+    explain: "đơn giản"
+  },
+  {
+    q: "Fibroin là protein phức tạp",
+    a: "sai",
+    explain: "đơn giản"
+  },
+  {
+    q: "Insulin là protein đơn giản",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Albumin là protein đơn giản",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fibroin là protein đơn giản",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Albumin là protein có trong lòng trắng trứng và là protein đơn giản",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fibroin là protein có trong tơ nhện và là protein đơn giản",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Albumin là protein có trong lòng trắng trứng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fibroin là protein có trong tơ nhện",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Miozin là protein cấu tạo nên cơ bắp",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Keratin là protein cấu tạo nên tóc, móng, sừng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Colagen là protein cấu tạo nên da sụn",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hemoglobin là protein cấu tạo nên máu",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein dạng sợi không tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein dạng sợi tan trong nước",
+    a: "sai",
+    explain: "không tan trong nước"
+  },
+  {
+    q: "Protein dạng cầu tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein dạng cầu không tan trong nước",
+    a: "sai",
+    explain: "tan được trong nước"
+  },
+  {
+    q: "Miozin, keratin, fibroin, collagen là protein dạng sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Miozin là protein dạng sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Keratin là protein dạng sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fibroin là protein dạng sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Collagen là protein dạng sợi",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Miozin, keratin, fibroin, collagen là protein dạng cầu",
+    a: "sai",
+    explain: "dạng sợi"
+  },
+  {
+    q: "Miozin là protein dạng cầu",
+    a: "sai",
+    explain: "dạng sợi"
+  },
+  {
+    q: "Keratin là protein dạng cầu",
+    a: "sai",
+    explain: "dạng sợi"
+  },
+  {
+    q: "Fibroin là protein dạng cầu",
+    a: "sai",
+    explain: "dạng sợi"
+  },
+  {
+    q: "Collagen là protein dạng cầu",
+    a: "sai",
+    explain: "dạng sợi"
+  },
+  {
+    q: "Miozin, keratin, fibroin, collagen không tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Miozin không tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Keratin không tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Fibroin không tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Collagen không tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Miozin, keratin, fibroin, collagen tan trong nước",
+    a: "sai",
+    explain: "không tan trong nước"
+  },
+  {
+    q: "Miozin tan trong nước",
+    a: "sai",
+    explain: "không tan trong nước"
+  },
+  {
+    q: "Keratin tan trong nước",
+    a: "sai",
+    explain: "không tan trong nước"
+  },
+  {
+    q: "Fibroin tan trong nước",
+    a: "sai",
+    explain: "không tan trong nước"
+  },
+  {
+    q: "Collagen tan trong nước",
+    a: "sai",
+    explain: "không tan trong nước"
+  },
+  {
+    q: "Hemoglobin, albumin là protein dạng cầu",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hemoglobin là protein dạng cầu",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Albumin là protein dạng cầu",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hemoglobin, albumin là protein dạng sợi",
+    a: "sai",
+    explain: "dạng cầu"
+  },
+  {
+    q: "Hemoglobin là protein dạng sợi",
+    a: "sai",
+    explain: "dạng cầu"
+  },
+  {
+    q: "Albumin là protein dạng sợi",
+    a: "sai",
+    explain: "dạng cầu"
+  },
+  {
+    q: "Hemoglobin, albumin tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hemoglobin tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Albumin tan trong nước",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Hemoglobin, albumin không tan trong nước",
+    a: "sai",
+    explain: "tan trong nước"
+  },
+  {
+    q: "Hemoglobin không tan trong nước",
+    a: "sai",
+    explain: "tan trong nước"
+  },
+  {
+    q: "Albumin không tan trong nước",
+    a: "sai",
+    explain: "tan trong nước"
+  },
+  {
+    q: "Protein có thể bị thuỷ phân dưới tác dụng của acid",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein có thể bị thuỷ phân dưới tác dụng của enzyne",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein có thể bị thuỷ phân dưới tác dụng của base",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein không bị thuỷ phân trong môi trường base",
+    a: "sai",
+    explain: "Protein có thể bị thuỷ phân dưới tác dụng của base"
+  },
+  {
+    q: "Protein có phản ứng màu biuret",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein có thể phản ứng với Cu(OH)2 tạo sản phẩm màu tím",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein có thể phản ứng với Cu(OH)2 tạo sản phẩm màu xanh lam",
+    a: "sai",
+    explain: "màu tím"
+  },
+  {
+    q: "Protein không có phản ứng màu biuret",
+    a: "sai",
+    explain: "có"
+  },
+  {
+    q: "Protein có thể phản ứng với HNO3 tạo kết tủa vàng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein có thể phản ứng với HNO3 tạo kết tủa vàng do trong protein có nhiều nhân thơm tạo hợp chất nitro màu vàng",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein có thể phản ứng với HNO3 tạo kết tủa trắng",
+    a: "sai",
+    explain: "kết tủa vàng"
+  },
+  {
+    q: "Protein bị đông tụ dưới tác dụng của nhiệt độ, acid, base, muối, cồn",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein không bị đông tụ dưới tác dụng của nhiệt độ, acid, base, muối, cồn",
+    a: "sai",
+    explain: "có bị đông tụ"
+  },
+  {
+    q: "Protein cần thiết cho sự sống, xây dựng tế bào, vận chuyển, xúc tác cho các quá trình sinh hoá",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Protein là thức ăn cung cấp năng lượng, aminoacid thiết yếu",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Enzyme là chất xúc tác cho các quá trình hoá học, sinh hoá",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Đa số enzyme có bản chất là protein",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Tất cả enzyme có bản chất là protein",
+    a: "sai",
+    explain: "đa số"
+  },
+  {
+    q: "Mỗi enzyme chỉ xúc tác cho 1 hoặc 1 vài quá trình đặc thù",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Phản ứng được tăng tốc độ nhiều lần nếu có enzyme làm chất xúc tác",
+    a: "đúng",
+    explain: "đúng"
+  },
+  {
+    q: "Phản ứng bị giảm tốc độ nhiều lần nếu có enzyme làm chất xúc tác",
+    a: "sai",
+    explain: "làm tăng tốc độ"
+  },
+
+
+
+];
+let ds_random = [...ds_ester, ...ds_xaphong,...ds_chatbeo,...ds_mono, ...ds_di, ...ds_poly,...ds_amine, ...ds_aminoacid,...ds_protein] ;
 localStorage.removeItem("Data");
+document.getElementById("ds-protein").addEventListener("click", ()=>{
+  localStorage.setItem("Data", JSON.stringify(ds_protein));
+  window.location.href = "test2.html";
+});
 document.getElementById("ds-aminoacid").addEventListener("click", ()=>{
   localStorage.setItem("Data", JSON.stringify(ds_aminoacid));
   window.location.href = "test2.html";
